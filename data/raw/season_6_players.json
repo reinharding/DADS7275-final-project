@@ -1,0 +1,126 @@
+[
+  {
+    "nickname": "7rowl",
+    "season": 6,
+    "uuid": "70eb9286e3e24153a8b37c8f884f1292",
+    "elo_rate": 2273,
+    "elo_rank": 17,
+    "country": "ua"
+  },
+  {
+    "nickname": "Ayreliaa",
+    "season": 6,
+    "uuid": "b5ae858c09384b79989ea305a4b5cedf",
+    "elo_rate": null,
+    "elo_rank": null,
+    "country": "ru"
+  },
+  {
+    "nickname": "BeefSalad",
+    "season": 6,
+    "uuid": "3b01d4b4fef14f178b75f05c04dd34ef",
+    "elo_rate": 2097,
+    "elo_rank": 54,
+    "country": "gb"
+  },
+  {
+    "nickname": "bing_pigs",
+    "season": 6,
+    "uuid": "92b63a39b36a445fa94c77ae212dcea3",
+    "elo_rate": 2409,
+    "elo_rank": 6,
+    "country": "au"
+  },
+  {
+    "nickname": "doogile",
+    "season": 6,
+    "uuid": "3c8757790ab0400b8b9e3936e0dd535b",
+    "elo_rate": 2385,
+    "elo_rank": 11,
+    "country": "us"
+  },
+  {
+    "nickname": "AutomattPLUS",
+    "season": 6,
+    "uuid": "2988fcfbc6b141a497faa915e13b6592",
+    "elo_rate": 2066,
+    "elo_rank": 64,
+    "country": "pl"
+  },
+  {
+    "nickname": "Feinberg",
+    "season": 6,
+    "uuid": "9a8e24df4c8549d696a6951da84fa5c4",
+    "elo_rate": 2462,
+    "elo_rank": 3,
+    "country": "us"
+  },
+  {
+    "nickname": "hackingnoises",
+    "season": 6,
+    "uuid": "7c92678742eb4e819f3122017697ae3d",
+    "elo_rate": 2480,
+    "elo_rank": 2,
+    "country": "hk"
+  },
+  {
+    "nickname": "lowk3y_",
+    "season": 6,
+    "uuid": "7665f76f431b41c6b321bea16aff913b",
+    "elo_rate": 2387,
+    "elo_rank": 10,
+    "country": null
+  },
+  {
+    "nickname": "MrBudgiee",
+    "season": 6,
+    "uuid": "0d0f007a376a462299bf23f2f713b0e5",
+    "elo_rate": 2086,
+    "elo_rank": 55,
+    "country": "ca"
+  },
+  {
+    "nickname": "Oxidiot",
+    "season": 6,
+    "uuid": "562a308be86c4ec09438387860e792cc",
+    "elo_rate": 2200,
+    "elo_rank": 31,
+    "country": "us"
+  },
+  {
+    "nickname": "silverrruns",
+    "season": 6,
+    "uuid": "17e787d1d6374f818b294f2319db370d",
+    "elo_rate": 2260,
+    "elo_rank": 18,
+    "country": "ca"
+  },
+  {
+    "nickname": "dandannyboy",
+    "season": 6,
+    "uuid": "e4808bc3e1e347988cbb59b55d723e0f",
+    "elo_rate": 1932,
+    "elo_rank": 109,
+    "country": "ca"
+  },
+  {
+    "nickname": "Erikfzf",
+    "season": 6,
+    "uuid": "c32cdd142a0147dcb91771319d745194",
+    "elo_rate": 2256,
+    "elo_rank": 20,
+    "country": "au"
+  },
+  {
+    "nickname": "ogurikappa",
+    "season": 6
+  },
+  {
+    "nickname": "TUDORULE",
+    "season": 6,
+    "uuid": "78a8ec9f99d34371b73decd2a78ff9b0",
+    "elo_rate": 2274,
+    "elo_rank": 16,
+    "country": "ro"
+  }
+]

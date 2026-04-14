@@ -1,0 +1,130 @@
+[
+  {
+    "nickname": "7rowl",
+    "season": 4,
+    "uuid": "70eb9286e3e24153a8b37c8f884f1292",
+    "elo_rate": 2273,
+    "elo_rank": 17,
+    "country": "ua"
+  },
+  {
+    "nickname": "Ancoboyy",
+    "season": 4,
+    "uuid": "bc80af38933f4ae19b0494681a54422b",
+    "elo_rate": 2179,
+    "elo_rank": 36,
+    "country": "tr"
+  },
+  {
+    "nickname": "dandannyboy",
+    "season": 4,
+    "uuid": "e4808bc3e1e347988cbb59b55d723e0f",
+    "elo_rate": 1932,
+    "elo_rank": 109,
+    "country": "ca"
+  },
+  {
+    "nickname": "doogile",
+    "season": 4,
+    "uuid": "3c8757790ab0400b8b9e3936e0dd535b",
+    "elo_rate": 2385,
+    "elo_rank": 11,
+    "country": "us"
+  },
+  {
+    "nickname": "AutomattPLUS",
+    "season": 4,
+    "uuid": "2988fcfbc6b141a497faa915e13b6592",
+    "elo_rate": 2066,
+    "elo_rank": 64,
+    "country": "pl"
+  },
+  {
+    "nickname": "hackingnoises",
+    "season": 4,
+    "uuid": "7c92678742eb4e819f3122017697ae3d",
+    "elo_rate": 2480,
+    "elo_rank": 2,
+    "country": "hk"
+  },
+  {
+    "nickname": "Hinart",
+    "season": 4,
+    "uuid": "25d4de4fe37248f0bba16b43ca1994bb",
+    "elo_rate": 1846,
+    "elo_rank": 162,
+    "country": "ua"
+  },
+  {
+    "nickname": "lowk3y_",
+    "season": 4,
+    "uuid": "7665f76f431b41c6b321bea16aff913b",
+    "elo_rate": 2387,
+    "elo_rank": 10,
+    "country": null
+  },
+  {
+    "nickname": "Oxidiot",
+    "season": 4,
+    "uuid": "562a308be86c4ec09438387860e792cc",
+    "elo_rate": 2200,
+    "elo_rank": 31,
+    "country": "us"
+  },
+  {
+    "nickname": "paplerr",
+    "season": 4,
+    "uuid": "c670041ed84c480cab4a6ee904905b5f",
+    "elo_rate": 2072,
+    "elo_rank": 60,
+    "country": "se"
+  },
+  {
+    "nickname": "priffie",
+    "season": 4,
+    "uuid": "af22aaab9ee74596a3578bd6345d25b5",
+    "elo_rate": null,
+    "elo_rank": null,
+    "country": null
+  },
+  {
+    "nickname": "silverrruns",
+    "season": 4,
+    "uuid": "17e787d1d6374f818b294f2319db370d",
+    "elo_rate": 2260,
+    "elo_rank": 18,
+    "country": "ca"
+  },
+  {
+    "nickname": "ANJOUU",
+    "season": 4,
+    "uuid": "625146b684804a29af2eaeb483a59ddf",
+    "elo_rate": 2231,
+    "elo_rank": 23,
+    "country": "se"
+  },
+  {
+    "nickname": "bing_pigs",
+    "season": 4,
+    "uuid": "92b63a39b36a445fa94c77ae212dcea3",
+    "elo_rate": 2409,
+    "elo_rank": 6,
+    "country": "au"
+  },
+  {
+    "nickname": "Cube1337x",
+    "season": 4,
+    "uuid": "1ae14cb96a2f4357a71efac6f7012b59",
+    "elo_rate": 1846,
+    "elo_rank": 162,
+    "country": "fi"
+  },
+  {
+    "nickname": "v_strid",
+    "season": 4,
+    "uuid": "388533d5a2ad4b349a31db4738670a4b",
+    "elo_rate": 2364,
+    "elo_rank": 12,
+    "country": "se"
+  }
+]

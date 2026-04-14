@@ -1,0 +1,130 @@
+[
+  {
+    "nickname": "7rowl",
+    "season": 7,
+    "uuid": "70eb9286e3e24153a8b37c8f884f1292",
+    "elo_rate": 2273,
+    "elo_rank": 17,
+    "country": "ua"
+  },
+  {
+    "nickname": "Ancoboyy",
+    "season": 7,
+    "uuid": "bc80af38933f4ae19b0494681a54422b",
+    "elo_rate": 2179,
+    "elo_rank": 36,
+    "country": "tr"
+  },
+  {
+    "nickname": "Aquacorde",
+    "season": 7,
+    "uuid": "253b53d832ab4bafb5ee0308d5164ccf",
+    "elo_rate": 2252,
+    "elo_rank": 21,
+    "country": "ca"
+  },
+  {
+    "nickname": "BadGamer",
+    "season": 7,
+    "uuid": "4cf401d7b9474756b06a653867d22fca",
+    "elo_rate": 2408,
+    "elo_rank": 7,
+    "country": "ca"
+  },
+  {
+    "nickname": "BeefSalad",
+    "season": 7,
+    "uuid": "3b01d4b4fef14f178b75f05c04dd34ef",
+    "elo_rate": 2097,
+    "elo_rank": 54,
+    "country": "gb"
+  },
+  {
+    "nickname": "bing_pigs",
+    "season": 7,
+    "uuid": "92b63a39b36a445fa94c77ae212dcea3",
+    "elo_rate": 2409,
+    "elo_rank": 6,
+    "country": "au"
+  },
+  {
+    "nickname": "doogile",
+    "season": 7,
+    "uuid": "3c8757790ab0400b8b9e3936e0dd535b",
+    "elo_rate": 2385,
+    "elo_rank": 11,
+    "country": "us"
+  },
+  {
+    "nickname": "Feinberg",
+    "season": 7,
+    "uuid": "9a8e24df4c8549d696a6951da84fa5c4",
+    "elo_rate": 2462,
+    "elo_rank": 3,
+    "country": "us"
+  },
+  {
+    "nickname": "Infume",
+    "season": 7,
+    "uuid": "a54e3bc4c6354b07a236b81efbcfe791",
+    "elo_rate": 2397,
+    "elo_rank": 9,
+    "country": "us"
+  },
+  {
+    "nickname": "lowk3y_",
+    "season": 7,
+    "uuid": "7665f76f431b41c6b321bea16aff913b",
+    "elo_rate": 2387,
+    "elo_rank": 10,
+    "country": null
+  },
+  {
+    "nickname": "priffie",
+    "season": 7,
+    "uuid": "af22aaab9ee74596a3578bd6345d25b5",
+    "elo_rate": null,
+    "elo_rank": null,
+    "country": null
+  },
+  {
+    "nickname": "retropog",
+    "season": 7,
+    "uuid": "25349f93cf194f3baeee93d024eccc21",
+    "elo_rate": 1977,
+    "elo_rank": 95,
+    "country": "au"
+  },
+  {
+    "nickname": "r7sD4fH6jK0wY5uB",
+    "season": 7,
+    "uuid": "8b6de3393be345fdb8dcf0959f42f457",
+    "elo_rate": 2008,
+    "elo_rank": 80,
+    "country": "us"
+  },
+  {
+    "nickname": "hackingnoises",
+    "season": 7,
+    "uuid": "7c92678742eb4e819f3122017697ae3d",
+    "elo_rate": 2480,
+    "elo_rank": 2,
+    "country": "hk"
+  },
+  {
+    "nickname": "Oxidiot",
+    "season": 7,
+    "uuid": "562a308be86c4ec09438387860e792cc",
+    "elo_rate": 2200,
+    "elo_rank": 31,
+    "country": "us"
+  },
+  {
+    "nickname": "silverrruns",
+    "season": 7,
+    "uuid": "17e787d1d6374f818b294f2319db370d",
+    "elo_rate": 2260,
+    "elo_rank": 18,
+    "country": "ca"
+  }
+]

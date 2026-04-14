@@ -1,0 +1,130 @@
+[
+  {
+    "nickname": "silverrruns",
+    "season": 1,
+    "uuid": "17e787d1d6374f818b294f2319db370d",
+    "elo_rate": 2260,
+    "elo_rank": 18,
+    "country": "ca"
+  },
+  {
+    "nickname": "dandannyboy",
+    "season": 1,
+    "uuid": "e4808bc3e1e347988cbb59b55d723e0f",
+    "elo_rate": 1932,
+    "elo_rank": 109,
+    "country": "ca"
+  },
+  {
+    "nickname": "Oxidiot",
+    "season": 1,
+    "uuid": "562a308be86c4ec09438387860e792cc",
+    "elo_rate": 2200,
+    "elo_rank": 31,
+    "country": "us"
+  },
+  {
+    "nickname": "Reignex",
+    "season": 1,
+    "uuid": "a536eec9a68e4d309cd09f5af4c006a7",
+    "elo_rate": null,
+    "elo_rank": null,
+    "country": null
+  },
+  {
+    "nickname": "priffie",
+    "season": 1,
+    "uuid": "af22aaab9ee74596a3578bd6345d25b5",
+    "elo_rate": null,
+    "elo_rank": null,
+    "country": null
+  },
+  {
+    "nickname": "orachi_",
+    "season": 1,
+    "uuid": "56714245be364bd1a469d0853552c109",
+    "elo_rate": 2004,
+    "elo_rank": 82,
+    "country": "il"
+  },
+  {
+    "nickname": "lowk3y_",
+    "season": 1,
+    "uuid": "7665f76f431b41c6b321bea16aff913b",
+    "elo_rate": 2387,
+    "elo_rank": 10,
+    "country": null
+  },
+  {
+    "nickname": "7rowl",
+    "season": 1,
+    "uuid": "70eb9286e3e24153a8b37c8f884f1292",
+    "elo_rate": 2273,
+    "elo_rank": 17,
+    "country": "ua"
+  },
+  {
+    "nickname": "doogile",
+    "season": 1,
+    "uuid": "3c8757790ab0400b8b9e3936e0dd535b",
+    "elo_rate": 2385,
+    "elo_rank": 11,
+    "country": "us"
+  },
+  {
+    "nickname": "Ancoboyy",
+    "season": 1,
+    "uuid": "bc80af38933f4ae19b0494681a54422b",
+    "elo_rate": 2179,
+    "elo_rank": 36,
+    "country": "tr"
+  },
+  {
+    "nickname": "pulsar32",
+    "season": 1,
+    "uuid": "4863326cccf043ecbb8ff88628bed781",
+    "elo_rate": null,
+    "elo_rank": null,
+    "country": "cf"
+  },
+  {
+    "nickname": "Ranik_",
+    "season": 1,
+    "uuid": "5ee577fdc1af45d3a6fb3e086cc293fb",
+    "elo_rate": 2059,
+    "elo_rank": 67,
+    "country": "il"
+  },
+  {
+    "nickname": "MoleyG",
+    "season": 1,
+    "uuid": "fa1bec35058546c98f9279f8be7cf9bc",
+    "elo_rate": 1895,
+    "elo_rank": 131,
+    "country": "au"
+  },
+  {
+    "nickname": "CroProYT",
+    "season": 1,
+    "uuid": "4129d8d1aafb4e73b97b9999db248060",
+    "elo_rate": 1930,
+    "elo_rank": 111,
+    "country": "hr"
+  },
+  {
+    "nickname": "AutomattPL",
+    "season": 1,
+    "uuid": "fa61606e8131484c8dee506d1ff9a8dc",
+    "elo_rate": null,
+    "elo_rank": null,
+    "country": null
+  },
+  {
+    "nickname": "Dylqn",
+    "season": 1,
+    "uuid": "2f59967f6a7841ab840e2cb032589a04",
+    "elo_rate": 1441,
+    "elo_rank": 1018,
+    "country": "us"
+  }
+]

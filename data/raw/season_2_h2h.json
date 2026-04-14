@@ -1,0 +1,2042 @@
+[
+  {
+    "player1": "lowk3y_",
+    "player2": "CroProYT",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0
+    },
+    "changes_4129d8d1aafb4e73b97b9999db248060": 0,
+    "changes_7665f76f431b41c6b321bea16aff913b": 0
+  },
+  {
+    "player1": "lowk3y_",
+    "player2": "dandannyboy",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 3,
+      "7665f76f431b41c6b321bea16aff913b": 2,
+      "e4808bc3e1e347988cbb59b55d723e0f": 1
+    },
+    "results_casual": {
+      "total": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0
+    },
+    "changes_7665f76f431b41c6b321bea16aff913b": 22,
+    "changes_e4808bc3e1e347988cbb59b55d723e0f": -22
+  },
+  {
+    "player1": "lowk3y_",
+    "player2": "doogile",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "3c8757790ab0400b8b9e3936e0dd535b": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "3c8757790ab0400b8b9e3936e0dd535b": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0
+    },
+    "changes_3c8757790ab0400b8b9e3936e0dd535b": 0,
+    "changes_7665f76f431b41c6b321bea16aff913b": 0
+  },
+  {
+    "player1": "lowk3y_",
+    "player2": "7rowl",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 3,
+      "70eb9286e3e24153a8b37c8f884f1292": 1,
+      "7665f76f431b41c6b321bea16aff913b": 2
+    },
+    "results_casual": {
+      "total": 0,
+      "70eb9286e3e24153a8b37c8f884f1292": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0
+    },
+    "changes_70eb9286e3e24153a8b37c8f884f1292": -15,
+    "changes_7665f76f431b41c6b321bea16aff913b": 15
+  },
+  {
+    "player1": "lowk3y_",
+    "player2": "kW1st",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0
+    },
+    "changes_4427794ee7ad48bc9b53c156fa4092e1": 0,
+    "changes_7665f76f431b41c6b321bea16aff913b": 0
+  },
+  {
+    "player1": "lowk3y_",
+    "player2": "priffie",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "changes_7665f76f431b41c6b321bea16aff913b": 0,
+    "changes_af22aaab9ee74596a3578bd6345d25b5": 0
+  },
+  {
+    "player1": "lowk3y_",
+    "player2": "dwoh",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 1,
+      "3910d98bea254b488a10d6e91e469f7e": 0,
+      "7665f76f431b41c6b321bea16aff913b": 1
+    },
+    "results_casual": {
+      "total": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0
+    },
+    "changes_3910d98bea254b488a10d6e91e469f7e": -14,
+    "changes_7665f76f431b41c6b321bea16aff913b": 14
+  },
+  {
+    "player1": "lowk3y_",
+    "player2": "silverrruns",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0,
+      "17e787d1d6374f818b294f2319db370d": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0,
+      "17e787d1d6374f818b294f2319db370d": 0
+    },
+    "changes_7665f76f431b41c6b321bea16aff913b": 0,
+    "changes_17e787d1d6374f818b294f2319db370d": 0
+  },
+  {
+    "player1": "lowk3y_",
+    "player2": "Emillk",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0
+    },
+    "changes_99aa9e0e8034479a90259e244dfb9029": 0,
+    "changes_7665f76f431b41c6b321bea16aff913b": 0
+  },
+  {
+    "player1": "lowk3y_",
+    "player2": "bing_pigs",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 11,
+      "7665f76f431b41c6b321bea16aff913b": 7,
+      "92b63a39b36a445fa94c77ae212dcea3": 4
+    },
+    "results_casual": {
+      "total": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0,
+      "92b63a39b36a445fa94c77ae212dcea3": 0
+    },
+    "changes_7665f76f431b41c6b321bea16aff913b": 121,
+    "changes_92b63a39b36a445fa94c77ae212dcea3": -121
+  },
+  {
+    "player1": "lowk3y_",
+    "player2": "drx6",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0
+    },
+    "changes_736dbdc44a3e452fa489f5344565835e": 0,
+    "changes_7665f76f431b41c6b321bea16aff913b": 0
+  },
+  {
+    "player1": "lowk3y_",
+    "player2": "Ancoboyy",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0
+    },
+    "changes_bc80af38933f4ae19b0494681a54422b": 0,
+    "changes_7665f76f431b41c6b321bea16aff913b": 0
+  },
+  {
+    "player1": "lowk3y_",
+    "player2": "Ranik_",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0
+    },
+    "changes_5ee577fdc1af45d3a6fb3e086cc293fb": 0,
+    "changes_7665f76f431b41c6b321bea16aff913b": 0
+  },
+  {
+    "player1": "lowk3y_",
+    "player2": "Oxidiot",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "562a308be86c4ec09438387860e792cc": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "562a308be86c4ec09438387860e792cc": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0
+    },
+    "changes_562a308be86c4ec09438387860e792cc": 0,
+    "changes_7665f76f431b41c6b321bea16aff913b": 0
+  },
+  {
+    "player1": "lowk3y_",
+    "player2": "AutomattPL",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "7665f76f431b41c6b321bea16aff913b": 0
+    },
+    "changes_fa61606e8131484c8dee506d1ff9a8dc": 0,
+    "changes_7665f76f431b41c6b321bea16aff913b": 0
+  },
+  {
+    "player1": "CroProYT",
+    "player2": "dandannyboy",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0
+    },
+    "changes_4129d8d1aafb4e73b97b9999db248060": 0,
+    "changes_e4808bc3e1e347988cbb59b55d723e0f": 0
+  },
+  {
+    "player1": "CroProYT",
+    "player2": "doogile",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "3c8757790ab0400b8b9e3936e0dd535b": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "3c8757790ab0400b8b9e3936e0dd535b": 0
+    },
+    "changes_4129d8d1aafb4e73b97b9999db248060": 0,
+    "changes_3c8757790ab0400b8b9e3936e0dd535b": 0
+  },
+  {
+    "player1": "CroProYT",
+    "player2": "7rowl",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "70eb9286e3e24153a8b37c8f884f1292": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "70eb9286e3e24153a8b37c8f884f1292": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0
+    },
+    "changes_70eb9286e3e24153a8b37c8f884f1292": 0,
+    "changes_4129d8d1aafb4e73b97b9999db248060": 0
+  },
+  {
+    "player1": "CroProYT",
+    "player2": "kW1st",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "changes_4129d8d1aafb4e73b97b9999db248060": 0,
+    "changes_4427794ee7ad48bc9b53c156fa4092e1": 0
+  },
+  {
+    "player1": "CroProYT",
+    "player2": "priffie",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "changes_4129d8d1aafb4e73b97b9999db248060": 0,
+    "changes_af22aaab9ee74596a3578bd6345d25b5": 0
+  },
+  {
+    "player1": "CroProYT",
+    "player2": "dwoh",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0
+    },
+    "changes_4129d8d1aafb4e73b97b9999db248060": 0,
+    "changes_3910d98bea254b488a10d6e91e469f7e": 0
+  },
+  {
+    "player1": "CroProYT",
+    "player2": "silverrruns",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "17e787d1d6374f818b294f2319db370d": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "17e787d1d6374f818b294f2319db370d": 0
+    },
+    "changes_4129d8d1aafb4e73b97b9999db248060": 0,
+    "changes_17e787d1d6374f818b294f2319db370d": 0
+  },
+  {
+    "player1": "CroProYT",
+    "player2": "Emillk",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0
+    },
+    "changes_4129d8d1aafb4e73b97b9999db248060": 0,
+    "changes_99aa9e0e8034479a90259e244dfb9029": 0
+  },
+  {
+    "player1": "CroProYT",
+    "player2": "bing_pigs",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "92b63a39b36a445fa94c77ae212dcea3": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "92b63a39b36a445fa94c77ae212dcea3": 0
+    },
+    "changes_4129d8d1aafb4e73b97b9999db248060": 0,
+    "changes_92b63a39b36a445fa94c77ae212dcea3": 0
+  },
+  {
+    "player1": "CroProYT",
+    "player2": "drx6",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0
+    },
+    "changes_4129d8d1aafb4e73b97b9999db248060": 0,
+    "changes_736dbdc44a3e452fa489f5344565835e": 0
+  },
+  {
+    "player1": "CroProYT",
+    "player2": "Ancoboyy",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0
+    },
+    "changes_bc80af38933f4ae19b0494681a54422b": 0,
+    "changes_4129d8d1aafb4e73b97b9999db248060": 0
+  },
+  {
+    "player1": "CroProYT",
+    "player2": "Ranik_",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 0
+    },
+    "changes_4129d8d1aafb4e73b97b9999db248060": 0,
+    "changes_5ee577fdc1af45d3a6fb3e086cc293fb": 0
+  },
+  {
+    "player1": "CroProYT",
+    "player2": "Oxidiot",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 1,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "562a308be86c4ec09438387860e792cc": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0,
+      "562a308be86c4ec09438387860e792cc": 0
+    },
+    "changes_4129d8d1aafb4e73b97b9999db248060": 2,
+    "changes_562a308be86c4ec09438387860e792cc": -2
+  },
+  {
+    "player1": "CroProYT",
+    "player2": "AutomattPL",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "4129d8d1aafb4e73b97b9999db248060": 0
+    },
+    "changes_fa61606e8131484c8dee506d1ff9a8dc": 0,
+    "changes_4129d8d1aafb4e73b97b9999db248060": 0
+  },
+  {
+    "player1": "dandannyboy",
+    "player2": "doogile",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 2,
+      "3c8757790ab0400b8b9e3936e0dd535b": 2,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "3c8757790ab0400b8b9e3936e0dd535b": 0,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0
+    },
+    "changes_3c8757790ab0400b8b9e3936e0dd535b": 18,
+    "changes_e4808bc3e1e347988cbb59b55d723e0f": -18
+  },
+  {
+    "player1": "dandannyboy",
+    "player2": "7rowl",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 1,
+      "70eb9286e3e24153a8b37c8f884f1292": 1,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "70eb9286e3e24153a8b37c8f884f1292": 0,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0
+    },
+    "changes_70eb9286e3e24153a8b37c8f884f1292": 14,
+    "changes_e4808bc3e1e347988cbb59b55d723e0f": -14
+  },
+  {
+    "player1": "dandannyboy",
+    "player2": "kW1st",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "changes_e4808bc3e1e347988cbb59b55d723e0f": 0,
+    "changes_4427794ee7ad48bc9b53c156fa4092e1": 0
+  },
+  {
+    "player1": "dandannyboy",
+    "player2": "priffie",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "changes_e4808bc3e1e347988cbb59b55d723e0f": 0,
+    "changes_af22aaab9ee74596a3578bd6345d25b5": 0
+  },
+  {
+    "player1": "dandannyboy",
+    "player2": "dwoh",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 1,
+      "3910d98bea254b488a10d6e91e469f7e": 1,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0
+    },
+    "changes_3910d98bea254b488a10d6e91e469f7e": 20,
+    "changes_e4808bc3e1e347988cbb59b55d723e0f": -20
+  },
+  {
+    "player1": "dandannyboy",
+    "player2": "silverrruns",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 23,
+      "17e787d1d6374f818b294f2319db370d": 14,
+      "e4808bc3e1e347988cbb59b55d723e0f": 8
+    },
+    "results_casual": {
+      "total": 0,
+      "17e787d1d6374f818b294f2319db370d": 0,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0
+    },
+    "changes_17e787d1d6374f818b294f2319db370d": 37,
+    "changes_e4808bc3e1e347988cbb59b55d723e0f": -37
+  },
+  {
+    "player1": "dandannyboy",
+    "player2": "Emillk",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0
+    },
+    "changes_99aa9e0e8034479a90259e244dfb9029": 0,
+    "changes_e4808bc3e1e347988cbb59b55d723e0f": 0
+  },
+  {
+    "player1": "dandannyboy",
+    "player2": "bing_pigs",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 3,
+      "92b63a39b36a445fa94c77ae212dcea3": 2,
+      "e4808bc3e1e347988cbb59b55d723e0f": 1
+    },
+    "results_casual": {
+      "total": 0,
+      "92b63a39b36a445fa94c77ae212dcea3": 0,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0
+    },
+    "changes_92b63a39b36a445fa94c77ae212dcea3": 9,
+    "changes_e4808bc3e1e347988cbb59b55d723e0f": -9
+  },
+  {
+    "player1": "dandannyboy",
+    "player2": "drx6",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 4,
+      "736dbdc44a3e452fa489f5344565835e": 2,
+      "e4808bc3e1e347988cbb59b55d723e0f": 2
+    },
+    "results_casual": {
+      "total": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0
+    },
+    "changes_736dbdc44a3e452fa489f5344565835e": -3,
+    "changes_e4808bc3e1e347988cbb59b55d723e0f": 3
+  },
+  {
+    "player1": "dandannyboy",
+    "player2": "Ancoboyy",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0
+    },
+    "changes_bc80af38933f4ae19b0494681a54422b": 0,
+    "changes_e4808bc3e1e347988cbb59b55d723e0f": 0
+  },
+  {
+    "player1": "dandannyboy",
+    "player2": "Ranik_",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 11,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 5,
+      "e4808bc3e1e347988cbb59b55d723e0f": 6
+    },
+    "results_casual": {
+      "total": 0,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 0,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0
+    },
+    "changes_5ee577fdc1af45d3a6fb3e086cc293fb": -68,
+    "changes_e4808bc3e1e347988cbb59b55d723e0f": 68
+  },
+  {
+    "player1": "dandannyboy",
+    "player2": "Oxidiot",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "562a308be86c4ec09438387860e792cc": 0,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "562a308be86c4ec09438387860e792cc": 0,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0
+    },
+    "changes_562a308be86c4ec09438387860e792cc": 0,
+    "changes_e4808bc3e1e347988cbb59b55d723e0f": 0
+  },
+  {
+    "player1": "dandannyboy",
+    "player2": "AutomattPL",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "e4808bc3e1e347988cbb59b55d723e0f": 0
+    },
+    "changes_fa61606e8131484c8dee506d1ff9a8dc": 0,
+    "changes_e4808bc3e1e347988cbb59b55d723e0f": 0
+  },
+  {
+    "player1": "doogile",
+    "player2": "7rowl",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 3,
+      "3c8757790ab0400b8b9e3936e0dd535b": 1,
+      "70eb9286e3e24153a8b37c8f884f1292": 2
+    },
+    "results_casual": {
+      "total": 0,
+      "3c8757790ab0400b8b9e3936e0dd535b": 0,
+      "70eb9286e3e24153a8b37c8f884f1292": 0
+    },
+    "changes_3c8757790ab0400b8b9e3936e0dd535b": -32,
+    "changes_70eb9286e3e24153a8b37c8f884f1292": 32
+  },
+  {
+    "player1": "doogile",
+    "player2": "kW1st",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "3c8757790ab0400b8b9e3936e0dd535b": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "3c8757790ab0400b8b9e3936e0dd535b": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "changes_3c8757790ab0400b8b9e3936e0dd535b": 0,
+    "changes_4427794ee7ad48bc9b53c156fa4092e1": 0
+  },
+  {
+    "player1": "doogile",
+    "player2": "priffie",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "3c8757790ab0400b8b9e3936e0dd535b": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "3c8757790ab0400b8b9e3936e0dd535b": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "changes_3c8757790ab0400b8b9e3936e0dd535b": 0,
+    "changes_af22aaab9ee74596a3578bd6345d25b5": 0
+  },
+  {
+    "player1": "doogile",
+    "player2": "dwoh",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "3c8757790ab0400b8b9e3936e0dd535b": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "3c8757790ab0400b8b9e3936e0dd535b": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0
+    },
+    "changes_3c8757790ab0400b8b9e3936e0dd535b": 0,
+    "changes_3910d98bea254b488a10d6e91e469f7e": 0
+  },
+  {
+    "player1": "doogile",
+    "player2": "silverrruns",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 15,
+      "17e787d1d6374f818b294f2319db370d": 5,
+      "3c8757790ab0400b8b9e3936e0dd535b": 9
+    },
+    "results_casual": {
+      "total": 0,
+      "17e787d1d6374f818b294f2319db370d": 0,
+      "3c8757790ab0400b8b9e3936e0dd535b": 0
+    },
+    "changes_17e787d1d6374f818b294f2319db370d": -35,
+    "changes_3c8757790ab0400b8b9e3936e0dd535b": 35
+  },
+  {
+    "player1": "doogile",
+    "player2": "Emillk",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0,
+      "3c8757790ab0400b8b9e3936e0dd535b": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0,
+      "3c8757790ab0400b8b9e3936e0dd535b": 0
+    },
+    "changes_99aa9e0e8034479a90259e244dfb9029": 0,
+    "changes_3c8757790ab0400b8b9e3936e0dd535b": 0
+  },
+  {
+    "player1": "doogile",
+    "player2": "bing_pigs",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 5,
+      "3c8757790ab0400b8b9e3936e0dd535b": 3,
+      "92b63a39b36a445fa94c77ae212dcea3": 2
+    },
+    "results_casual": {
+      "total": 0,
+      "3c8757790ab0400b8b9e3936e0dd535b": 0,
+      "92b63a39b36a445fa94c77ae212dcea3": 0
+    },
+    "changes_3c8757790ab0400b8b9e3936e0dd535b": 4,
+    "changes_92b63a39b36a445fa94c77ae212dcea3": -4
+  },
+  {
+    "player1": "doogile",
+    "player2": "drx6",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "3c8757790ab0400b8b9e3936e0dd535b": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "3c8757790ab0400b8b9e3936e0dd535b": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0
+    },
+    "changes_3c8757790ab0400b8b9e3936e0dd535b": 0,
+    "changes_736dbdc44a3e452fa489f5344565835e": 0
+  },
+  {
+    "player1": "doogile",
+    "player2": "Ancoboyy",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 3,
+      "3c8757790ab0400b8b9e3936e0dd535b": 1,
+      "bc80af38933f4ae19b0494681a54422b": 2
+    },
+    "results_casual": {
+      "total": 0,
+      "3c8757790ab0400b8b9e3936e0dd535b": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0
+    },
+    "changes_3c8757790ab0400b8b9e3936e0dd535b": -50,
+    "changes_bc80af38933f4ae19b0494681a54422b": 50
+  },
+  {
+    "player1": "doogile",
+    "player2": "Ranik_",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 4,
+      "3c8757790ab0400b8b9e3936e0dd535b": 2,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 1
+    },
+    "results_casual": {
+      "total": 0,
+      "3c8757790ab0400b8b9e3936e0dd535b": 0,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 0
+    },
+    "changes_3c8757790ab0400b8b9e3936e0dd535b": -9,
+    "changes_5ee577fdc1af45d3a6fb3e086cc293fb": 9
+  },
+  {
+    "player1": "doogile",
+    "player2": "Oxidiot",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 2,
+      "3c8757790ab0400b8b9e3936e0dd535b": 2,
+      "562a308be86c4ec09438387860e792cc": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "3c8757790ab0400b8b9e3936e0dd535b": 0,
+      "562a308be86c4ec09438387860e792cc": 0
+    },
+    "changes_3c8757790ab0400b8b9e3936e0dd535b": 25,
+    "changes_562a308be86c4ec09438387860e792cc": -25
+  },
+  {
+    "player1": "doogile",
+    "player2": "AutomattPL",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "3c8757790ab0400b8b9e3936e0dd535b": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "3c8757790ab0400b8b9e3936e0dd535b": 0
+    },
+    "changes_fa61606e8131484c8dee506d1ff9a8dc": 0,
+    "changes_3c8757790ab0400b8b9e3936e0dd535b": 0
+  },
+  {
+    "player1": "7rowl",
+    "player2": "kW1st",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "70eb9286e3e24153a8b37c8f884f1292": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "70eb9286e3e24153a8b37c8f884f1292": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "changes_70eb9286e3e24153a8b37c8f884f1292": 0,
+    "changes_4427794ee7ad48bc9b53c156fa4092e1": 0
+  },
+  {
+    "player1": "7rowl",
+    "player2": "priffie",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "70eb9286e3e24153a8b37c8f884f1292": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "70eb9286e3e24153a8b37c8f884f1292": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "changes_70eb9286e3e24153a8b37c8f884f1292": 0,
+    "changes_af22aaab9ee74596a3578bd6345d25b5": 0
+  },
+  {
+    "player1": "7rowl",
+    "player2": "dwoh",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "70eb9286e3e24153a8b37c8f884f1292": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "70eb9286e3e24153a8b37c8f884f1292": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0
+    },
+    "changes_70eb9286e3e24153a8b37c8f884f1292": 0,
+    "changes_3910d98bea254b488a10d6e91e469f7e": 0
+  },
+  {
+    "player1": "7rowl",
+    "player2": "silverrruns",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 4,
+      "17e787d1d6374f818b294f2319db370d": 1,
+      "70eb9286e3e24153a8b37c8f884f1292": 3
+    },
+    "results_casual": {
+      "total": 0,
+      "17e787d1d6374f818b294f2319db370d": 0,
+      "70eb9286e3e24153a8b37c8f884f1292": 0
+    },
+    "changes_17e787d1d6374f818b294f2319db370d": -32,
+    "changes_70eb9286e3e24153a8b37c8f884f1292": 32
+  },
+  {
+    "player1": "7rowl",
+    "player2": "Emillk",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 1,
+      "70eb9286e3e24153a8b37c8f884f1292": 1,
+      "99aa9e0e8034479a90259e244dfb9029": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "70eb9286e3e24153a8b37c8f884f1292": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0
+    },
+    "changes_70eb9286e3e24153a8b37c8f884f1292": 13,
+    "changes_99aa9e0e8034479a90259e244dfb9029": -13
+  },
+  {
+    "player1": "7rowl",
+    "player2": "bing_pigs",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 15,
+      "70eb9286e3e24153a8b37c8f884f1292": 4,
+      "92b63a39b36a445fa94c77ae212dcea3": 11
+    },
+    "results_casual": {
+      "total": 0,
+      "70eb9286e3e24153a8b37c8f884f1292": 0,
+      "92b63a39b36a445fa94c77ae212dcea3": 0
+    },
+    "changes_70eb9286e3e24153a8b37c8f884f1292": -112,
+    "changes_92b63a39b36a445fa94c77ae212dcea3": 112
+  },
+  {
+    "player1": "7rowl",
+    "player2": "drx6",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "70eb9286e3e24153a8b37c8f884f1292": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "70eb9286e3e24153a8b37c8f884f1292": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0
+    },
+    "changes_70eb9286e3e24153a8b37c8f884f1292": 0,
+    "changes_736dbdc44a3e452fa489f5344565835e": 0
+  },
+  {
+    "player1": "7rowl",
+    "player2": "Ancoboyy",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 16,
+      "70eb9286e3e24153a8b37c8f884f1292": 12,
+      "bc80af38933f4ae19b0494681a54422b": 4
+    },
+    "results_casual": {
+      "total": 0,
+      "70eb9286e3e24153a8b37c8f884f1292": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0
+    },
+    "changes_70eb9286e3e24153a8b37c8f884f1292": 135,
+    "changes_bc80af38933f4ae19b0494681a54422b": -135
+  },
+  {
+    "player1": "7rowl",
+    "player2": "Ranik_",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 15,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 2,
+      "70eb9286e3e24153a8b37c8f884f1292": 13
+    },
+    "results_casual": {
+      "total": 0,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 0,
+      "70eb9286e3e24153a8b37c8f884f1292": 0
+    },
+    "changes_5ee577fdc1af45d3a6fb3e086cc293fb": -178,
+    "changes_70eb9286e3e24153a8b37c8f884f1292": 178
+  },
+  {
+    "player1": "7rowl",
+    "player2": "Oxidiot",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 7,
+      "562a308be86c4ec09438387860e792cc": 2,
+      "70eb9286e3e24153a8b37c8f884f1292": 5
+    },
+    "results_casual": {
+      "total": 0,
+      "562a308be86c4ec09438387860e792cc": 0,
+      "70eb9286e3e24153a8b37c8f884f1292": 0
+    },
+    "changes_562a308be86c4ec09438387860e792cc": -43,
+    "changes_70eb9286e3e24153a8b37c8f884f1292": 43
+  },
+  {
+    "player1": "7rowl",
+    "player2": "AutomattPL",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "70eb9286e3e24153a8b37c8f884f1292": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "70eb9286e3e24153a8b37c8f884f1292": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0
+    },
+    "changes_70eb9286e3e24153a8b37c8f884f1292": 0,
+    "changes_fa61606e8131484c8dee506d1ff9a8dc": 0
+  },
+  {
+    "player1": "kW1st",
+    "player2": "priffie",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "changes_4427794ee7ad48bc9b53c156fa4092e1": 0,
+    "changes_af22aaab9ee74596a3578bd6345d25b5": 0
+  },
+  {
+    "player1": "kW1st",
+    "player2": "dwoh",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "changes_3910d98bea254b488a10d6e91e469f7e": 0,
+    "changes_4427794ee7ad48bc9b53c156fa4092e1": 0
+  },
+  {
+    "player1": "kW1st",
+    "player2": "silverrruns",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0,
+      "17e787d1d6374f818b294f2319db370d": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0,
+      "17e787d1d6374f818b294f2319db370d": 0
+    },
+    "changes_4427794ee7ad48bc9b53c156fa4092e1": 0,
+    "changes_17e787d1d6374f818b294f2319db370d": 0
+  },
+  {
+    "player1": "kW1st",
+    "player2": "Emillk",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "changes_99aa9e0e8034479a90259e244dfb9029": 0,
+    "changes_4427794ee7ad48bc9b53c156fa4092e1": 0
+  },
+  {
+    "player1": "kW1st",
+    "player2": "bing_pigs",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "92b63a39b36a445fa94c77ae212dcea3": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "92b63a39b36a445fa94c77ae212dcea3": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "changes_92b63a39b36a445fa94c77ae212dcea3": 0,
+    "changes_4427794ee7ad48bc9b53c156fa4092e1": 0
+  },
+  {
+    "player1": "kW1st",
+    "player2": "drx6",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "changes_736dbdc44a3e452fa489f5344565835e": 0,
+    "changes_4427794ee7ad48bc9b53c156fa4092e1": 0
+  },
+  {
+    "player1": "kW1st",
+    "player2": "Ancoboyy",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "changes_bc80af38933f4ae19b0494681a54422b": 0,
+    "changes_4427794ee7ad48bc9b53c156fa4092e1": 0
+  },
+  {
+    "player1": "kW1st",
+    "player2": "Ranik_",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "changes_5ee577fdc1af45d3a6fb3e086cc293fb": 0,
+    "changes_4427794ee7ad48bc9b53c156fa4092e1": 0
+  },
+  {
+    "player1": "kW1st",
+    "player2": "Oxidiot",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "562a308be86c4ec09438387860e792cc": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "562a308be86c4ec09438387860e792cc": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "changes_562a308be86c4ec09438387860e792cc": 0,
+    "changes_4427794ee7ad48bc9b53c156fa4092e1": 0
+  },
+  {
+    "player1": "kW1st",
+    "player2": "AutomattPL",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "4427794ee7ad48bc9b53c156fa4092e1": 0
+    },
+    "changes_fa61606e8131484c8dee506d1ff9a8dc": 0,
+    "changes_4427794ee7ad48bc9b53c156fa4092e1": 0
+  },
+  {
+    "player1": "priffie",
+    "player2": "dwoh",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "changes_3910d98bea254b488a10d6e91e469f7e": 0,
+    "changes_af22aaab9ee74596a3578bd6345d25b5": 0
+  },
+  {
+    "player1": "priffie",
+    "player2": "silverrruns",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0,
+      "17e787d1d6374f818b294f2319db370d": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0,
+      "17e787d1d6374f818b294f2319db370d": 0
+    },
+    "changes_af22aaab9ee74596a3578bd6345d25b5": 0,
+    "changes_17e787d1d6374f818b294f2319db370d": 0
+  },
+  {
+    "player1": "priffie",
+    "player2": "Emillk",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "changes_99aa9e0e8034479a90259e244dfb9029": 0,
+    "changes_af22aaab9ee74596a3578bd6345d25b5": 0
+  },
+  {
+    "player1": "priffie",
+    "player2": "bing_pigs",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "92b63a39b36a445fa94c77ae212dcea3": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "92b63a39b36a445fa94c77ae212dcea3": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "changes_92b63a39b36a445fa94c77ae212dcea3": 0,
+    "changes_af22aaab9ee74596a3578bd6345d25b5": 0
+  },
+  {
+    "player1": "priffie",
+    "player2": "drx6",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "changes_736dbdc44a3e452fa489f5344565835e": 0,
+    "changes_af22aaab9ee74596a3578bd6345d25b5": 0
+  },
+  {
+    "player1": "priffie",
+    "player2": "Ancoboyy",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "changes_bc80af38933f4ae19b0494681a54422b": 0,
+    "changes_af22aaab9ee74596a3578bd6345d25b5": 0
+  },
+  {
+    "player1": "priffie",
+    "player2": "Ranik_",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "changes_5ee577fdc1af45d3a6fb3e086cc293fb": 0,
+    "changes_af22aaab9ee74596a3578bd6345d25b5": 0
+  },
+  {
+    "player1": "priffie",
+    "player2": "Oxidiot",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "562a308be86c4ec09438387860e792cc": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "562a308be86c4ec09438387860e792cc": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "changes_562a308be86c4ec09438387860e792cc": 0,
+    "changes_af22aaab9ee74596a3578bd6345d25b5": 0
+  },
+  {
+    "player1": "priffie",
+    "player2": "AutomattPL",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "af22aaab9ee74596a3578bd6345d25b5": 0
+    },
+    "changes_fa61606e8131484c8dee506d1ff9a8dc": 0,
+    "changes_af22aaab9ee74596a3578bd6345d25b5": 0
+  },
+  {
+    "player1": "dwoh",
+    "player2": "silverrruns",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 2,
+      "17e787d1d6374f818b294f2319db370d": 1,
+      "3910d98bea254b488a10d6e91e469f7e": 1
+    },
+    "results_casual": {
+      "total": 0,
+      "17e787d1d6374f818b294f2319db370d": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0
+    },
+    "changes_17e787d1d6374f818b294f2319db370d": -12,
+    "changes_3910d98bea254b488a10d6e91e469f7e": 12
+  },
+  {
+    "player1": "dwoh",
+    "player2": "Emillk",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0
+    },
+    "changes_99aa9e0e8034479a90259e244dfb9029": 0,
+    "changes_3910d98bea254b488a10d6e91e469f7e": 0
+  },
+  {
+    "player1": "dwoh",
+    "player2": "bing_pigs",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "92b63a39b36a445fa94c77ae212dcea3": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "92b63a39b36a445fa94c77ae212dcea3": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0
+    },
+    "changes_92b63a39b36a445fa94c77ae212dcea3": 0,
+    "changes_3910d98bea254b488a10d6e91e469f7e": 0
+  },
+  {
+    "player1": "dwoh",
+    "player2": "drx6",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0
+    },
+    "changes_736dbdc44a3e452fa489f5344565835e": 0,
+    "changes_3910d98bea254b488a10d6e91e469f7e": 0
+  },
+  {
+    "player1": "dwoh",
+    "player2": "Ancoboyy",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0
+    },
+    "changes_bc80af38933f4ae19b0494681a54422b": 0,
+    "changes_3910d98bea254b488a10d6e91e469f7e": 0
+  },
+  {
+    "player1": "dwoh",
+    "player2": "Ranik_",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0
+    },
+    "changes_5ee577fdc1af45d3a6fb3e086cc293fb": 0,
+    "changes_3910d98bea254b488a10d6e91e469f7e": 0
+  },
+  {
+    "player1": "dwoh",
+    "player2": "Oxidiot",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 2,
+      "3910d98bea254b488a10d6e91e469f7e": 1,
+      "562a308be86c4ec09438387860e792cc": 1
+    },
+    "results_casual": {
+      "total": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0,
+      "562a308be86c4ec09438387860e792cc": 0
+    },
+    "changes_3910d98bea254b488a10d6e91e469f7e": -1,
+    "changes_562a308be86c4ec09438387860e792cc": 1
+  },
+  {
+    "player1": "dwoh",
+    "player2": "AutomattPL",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "3910d98bea254b488a10d6e91e469f7e": 0
+    },
+    "changes_fa61606e8131484c8dee506d1ff9a8dc": 0,
+    "changes_3910d98bea254b488a10d6e91e469f7e": 0
+  },
+  {
+    "player1": "silverrruns",
+    "player2": "Emillk",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 1,
+      "17e787d1d6374f818b294f2319db370d": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 1
+    },
+    "results_casual": {
+      "total": 0,
+      "17e787d1d6374f818b294f2319db370d": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0
+    },
+    "changes_17e787d1d6374f818b294f2319db370d": -27,
+    "changes_99aa9e0e8034479a90259e244dfb9029": 27
+  },
+  {
+    "player1": "silverrruns",
+    "player2": "bing_pigs",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 10,
+      "17e787d1d6374f818b294f2319db370d": 4,
+      "92b63a39b36a445fa94c77ae212dcea3": 6
+    },
+    "results_casual": {
+      "total": 0,
+      "17e787d1d6374f818b294f2319db370d": 0,
+      "92b63a39b36a445fa94c77ae212dcea3": 0
+    },
+    "changes_17e787d1d6374f818b294f2319db370d": -21,
+    "changes_92b63a39b36a445fa94c77ae212dcea3": 21
+  },
+  {
+    "player1": "silverrruns",
+    "player2": "drx6",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 2,
+      "17e787d1d6374f818b294f2319db370d": 1,
+      "736dbdc44a3e452fa489f5344565835e": 1
+    },
+    "results_casual": {
+      "total": 0,
+      "17e787d1d6374f818b294f2319db370d": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0
+    },
+    "changes_17e787d1d6374f818b294f2319db370d": -11,
+    "changes_736dbdc44a3e452fa489f5344565835e": 11
+  },
+  {
+    "player1": "silverrruns",
+    "player2": "Ancoboyy",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 1,
+      "17e787d1d6374f818b294f2319db370d": 0,
+      "bc80af38933f4ae19b0494681a54422b": 1
+    },
+    "results_casual": {
+      "total": 0,
+      "17e787d1d6374f818b294f2319db370d": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0
+    },
+    "changes_17e787d1d6374f818b294f2319db370d": -16,
+    "changes_bc80af38933f4ae19b0494681a54422b": 16
+  },
+  {
+    "player1": "silverrruns",
+    "player2": "Ranik_",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 6,
+      "17e787d1d6374f818b294f2319db370d": 3,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 3
+    },
+    "results_casual": {
+      "total": 0,
+      "17e787d1d6374f818b294f2319db370d": 0,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 0
+    },
+    "changes_17e787d1d6374f818b294f2319db370d": 0,
+    "changes_5ee577fdc1af45d3a6fb3e086cc293fb": 0
+  },
+  {
+    "player1": "silverrruns",
+    "player2": "Oxidiot",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "562a308be86c4ec09438387860e792cc": 0,
+      "17e787d1d6374f818b294f2319db370d": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "562a308be86c4ec09438387860e792cc": 0,
+      "17e787d1d6374f818b294f2319db370d": 0
+    },
+    "changes_562a308be86c4ec09438387860e792cc": 0,
+    "changes_17e787d1d6374f818b294f2319db370d": 0
+  },
+  {
+    "player1": "silverrruns",
+    "player2": "AutomattPL",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "17e787d1d6374f818b294f2319db370d": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "17e787d1d6374f818b294f2319db370d": 0
+    },
+    "changes_fa61606e8131484c8dee506d1ff9a8dc": 0,
+    "changes_17e787d1d6374f818b294f2319db370d": 0
+  },
+  {
+    "player1": "Emillk",
+    "player2": "bing_pigs",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0,
+      "92b63a39b36a445fa94c77ae212dcea3": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0,
+      "92b63a39b36a445fa94c77ae212dcea3": 0
+    },
+    "changes_99aa9e0e8034479a90259e244dfb9029": 0,
+    "changes_92b63a39b36a445fa94c77ae212dcea3": 0
+  },
+  {
+    "player1": "Emillk",
+    "player2": "drx6",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0
+    },
+    "changes_99aa9e0e8034479a90259e244dfb9029": 0,
+    "changes_736dbdc44a3e452fa489f5344565835e": 0
+  },
+  {
+    "player1": "Emillk",
+    "player2": "Ancoboyy",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0
+    },
+    "changes_bc80af38933f4ae19b0494681a54422b": 0,
+    "changes_99aa9e0e8034479a90259e244dfb9029": 0
+  },
+  {
+    "player1": "Emillk",
+    "player2": "Ranik_",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 0
+    },
+    "changes_99aa9e0e8034479a90259e244dfb9029": 0,
+    "changes_5ee577fdc1af45d3a6fb3e086cc293fb": 0
+  },
+  {
+    "player1": "Emillk",
+    "player2": "Oxidiot",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 2,
+      "562a308be86c4ec09438387860e792cc": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 2
+    },
+    "results_casual": {
+      "total": 0,
+      "562a308be86c4ec09438387860e792cc": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0
+    },
+    "changes_562a308be86c4ec09438387860e792cc": -49,
+    "changes_99aa9e0e8034479a90259e244dfb9029": 49
+  },
+  {
+    "player1": "Emillk",
+    "player2": "AutomattPL",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "99aa9e0e8034479a90259e244dfb9029": 0
+    },
+    "changes_fa61606e8131484c8dee506d1ff9a8dc": 0,
+    "changes_99aa9e0e8034479a90259e244dfb9029": 0
+  },
+  {
+    "player1": "bing_pigs",
+    "player2": "drx6",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 1,
+      "736dbdc44a3e452fa489f5344565835e": 0,
+      "92b63a39b36a445fa94c77ae212dcea3": 1
+    },
+    "results_casual": {
+      "total": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0,
+      "92b63a39b36a445fa94c77ae212dcea3": 0
+    },
+    "changes_736dbdc44a3e452fa489f5344565835e": -16,
+    "changes_92b63a39b36a445fa94c77ae212dcea3": 16
+  },
+  {
+    "player1": "bing_pigs",
+    "player2": "Ancoboyy",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 28,
+      "92b63a39b36a445fa94c77ae212dcea3": 15,
+      "bc80af38933f4ae19b0494681a54422b": 13
+    },
+    "results_casual": {
+      "total": 0,
+      "92b63a39b36a445fa94c77ae212dcea3": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0
+    },
+    "changes_92b63a39b36a445fa94c77ae212dcea3": -34,
+    "changes_bc80af38933f4ae19b0494681a54422b": 34
+  },
+  {
+    "player1": "bing_pigs",
+    "player2": "Ranik_",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 11,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 4,
+      "92b63a39b36a445fa94c77ae212dcea3": 7
+    },
+    "results_casual": {
+      "total": 0,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 0,
+      "92b63a39b36a445fa94c77ae212dcea3": 0
+    },
+    "changes_5ee577fdc1af45d3a6fb3e086cc293fb": 2,
+    "changes_92b63a39b36a445fa94c77ae212dcea3": -2
+  },
+  {
+    "player1": "bing_pigs",
+    "player2": "Oxidiot",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 5,
+      "562a308be86c4ec09438387860e792cc": 2,
+      "92b63a39b36a445fa94c77ae212dcea3": 3
+    },
+    "results_casual": {
+      "total": 0,
+      "562a308be86c4ec09438387860e792cc": 0,
+      "92b63a39b36a445fa94c77ae212dcea3": 0
+    },
+    "changes_562a308be86c4ec09438387860e792cc": 12,
+    "changes_92b63a39b36a445fa94c77ae212dcea3": -12
+  },
+  {
+    "player1": "bing_pigs",
+    "player2": "AutomattPL",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "92b63a39b36a445fa94c77ae212dcea3": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "92b63a39b36a445fa94c77ae212dcea3": 0
+    },
+    "changes_fa61606e8131484c8dee506d1ff9a8dc": 0,
+    "changes_92b63a39b36a445fa94c77ae212dcea3": 0
+  },
+  {
+    "player1": "drx6",
+    "player2": "Ancoboyy",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0
+    },
+    "changes_bc80af38933f4ae19b0494681a54422b": 0,
+    "changes_736dbdc44a3e452fa489f5344565835e": 0
+  },
+  {
+    "player1": "drx6",
+    "player2": "Ranik_",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0
+    },
+    "changes_5ee577fdc1af45d3a6fb3e086cc293fb": 0,
+    "changes_736dbdc44a3e452fa489f5344565835e": 0
+  },
+  {
+    "player1": "drx6",
+    "player2": "Oxidiot",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 1,
+      "562a308be86c4ec09438387860e792cc": 0,
+      "736dbdc44a3e452fa489f5344565835e": 1
+    },
+    "results_casual": {
+      "total": 0,
+      "562a308be86c4ec09438387860e792cc": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0
+    },
+    "changes_562a308be86c4ec09438387860e792cc": -21,
+    "changes_736dbdc44a3e452fa489f5344565835e": 21
+  },
+  {
+    "player1": "drx6",
+    "player2": "AutomattPL",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "736dbdc44a3e452fa489f5344565835e": 0
+    },
+    "changes_fa61606e8131484c8dee506d1ff9a8dc": 0,
+    "changes_736dbdc44a3e452fa489f5344565835e": 0
+  },
+  {
+    "player1": "Ancoboyy",
+    "player2": "Ranik_",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 16,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 1,
+      "bc80af38933f4ae19b0494681a54422b": 15
+    },
+    "results_casual": {
+      "total": 0,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0
+    },
+    "changes_5ee577fdc1af45d3a6fb3e086cc293fb": -207,
+    "changes_bc80af38933f4ae19b0494681a54422b": 207
+  },
+  {
+    "player1": "Ancoboyy",
+    "player2": "Oxidiot",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 1,
+      "562a308be86c4ec09438387860e792cc": 1,
+      "bc80af38933f4ae19b0494681a54422b": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "562a308be86c4ec09438387860e792cc": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0
+    },
+    "changes_562a308be86c4ec09438387860e792cc": 26,
+    "changes_bc80af38933f4ae19b0494681a54422b": -26
+  },
+  {
+    "player1": "Ancoboyy",
+    "player2": "AutomattPL",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "bc80af38933f4ae19b0494681a54422b": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0
+    },
+    "changes_bc80af38933f4ae19b0494681a54422b": 0,
+    "changes_fa61606e8131484c8dee506d1ff9a8dc": 0
+  },
+  {
+    "player1": "Ranik_",
+    "player2": "Oxidiot",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 3,
+      "562a308be86c4ec09438387860e792cc": 2,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 1
+    },
+    "results_casual": {
+      "total": 0,
+      "562a308be86c4ec09438387860e792cc": 0,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 0
+    },
+    "changes_562a308be86c4ec09438387860e792cc": 22,
+    "changes_5ee577fdc1af45d3a6fb3e086cc293fb": -22
+  },
+  {
+    "player1": "Ranik_",
+    "player2": "AutomattPL",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "5ee577fdc1af45d3a6fb3e086cc293fb": 0
+    },
+    "changes_fa61606e8131484c8dee506d1ff9a8dc": 0,
+    "changes_5ee577fdc1af45d3a6fb3e086cc293fb": 0
+  },
+  {
+    "player1": "Oxidiot",
+    "player2": "AutomattPL",
+    "players_count": 2,
+    "results_ranked": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "562a308be86c4ec09438387860e792cc": 0
+    },
+    "results_casual": {
+      "total": 0,
+      "fa61606e8131484c8dee506d1ff9a8dc": 0,
+      "562a308be86c4ec09438387860e792cc": 0
+    },
+    "changes_fa61606e8131484c8dee506d1ff9a8dc": 0,
+    "changes_562a308be86c4ec09438387860e792cc": 0
+  }
+]

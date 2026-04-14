@@ -1,0 +1,529 @@
+{
+  "status": "success",
+  "data": {
+    "data": {
+      "players": [
+        {
+          "uuid": "17e787d1d6374f818b294f2319db370d",
+          "nickname": "silverrruns",
+          "seasonEloRate": 2309,
+          "seasonEloRank": 1,
+          "seedNumber": 0,
+          "personalBest": 457763
+        },
+        {
+          "uuid": "70eb9286e3e24153a8b37c8f884f1292",
+          "nickname": "7rowl",
+          "seasonEloRate": 2150,
+          "seasonEloRank": 3,
+          "seedNumber": 1,
+          "personalBest": 465005
+        },
+        {
+          "uuid": "56714245be364bd1a469d0853552c109",
+          "nickname": "orachi_",
+          "seasonEloRate": 2118,
+          "seasonEloRank": 4,
+          "seedNumber": 2,
+          "personalBest": 508568
+        },
+        {
+          "uuid": "562a308be86c4ec09438387860e792cc",
+          "nickname": "Oxidiot",
+          "seasonEloRate": 2067,
+          "seasonEloRank": 5,
+          "seedNumber": 3,
+          "personalBest": 470517
+        },
+        {
+          "uuid": "af22aaab9ee74596a3578bd6345d25b5",
+          "nickname": "Priffin",
+          "seasonEloRate": 2042,
+          "seasonEloRank": 6,
+          "seedNumber": 4,
+          "personalBest": 493854
+        },
+        {
+          "uuid": "e4808bc3e1e347988cbb59b55d723e0f",
+          "nickname": "dandannyboy",
+          "seasonEloRate": 2039,
+          "seasonEloRank": 7,
+          "seedNumber": 5,
+          "personalBest": 451470
+        },
+        {
+          "uuid": "7665f76f431b41c6b321bea16aff913b",
+          "nickname": "lowk3y_",
+          "seasonEloRate": 2023,
+          "seasonEloRank": 8,
+          "seedNumber": 6,
+          "personalBest": 380341
+        },
+        {
+          "uuid": "a536eec9a68e4d309cd09f5af4c006a7",
+          "nickname": "Reignex",
+          "seasonEloRate": 2010,
+          "seasonEloRank": 9,
+          "seedNumber": 7,
+          "personalBest": 530104
+        },
+        {
+          "uuid": "4863326cccf043ecbb8ff88628bed781",
+          "nickname": "pulsar32",
+          "seasonEloRate": 1665,
+          "seasonEloRank": 67,
+          "seedNumber": 8,
+          "personalBest": 487533
+        },
+        {
+          "uuid": "bc80af38933f4ae19b0494681a54422b",
+          "nickname": "Ancoboyy",
+          "seasonEloRate": 1903,
+          "seasonEloRank": 15,
+          "seedNumber": 9,
+          "personalBest": 470728
+        },
+        {
+          "uuid": "2f59967f6a7841ab840e2cb032589a04",
+          "nickname": "Dylqn",
+          "seasonEloRate": 1835,
+          "seasonEloRank": 24,
+          "seedNumber": 10,
+          "personalBest": 534284
+        },
+        {
+          "uuid": "fa1bec35058546c98f9279f8be7cf9bc",
+          "nickname": "MoleyG",
+          "seasonEloRate": 1747,
+          "seasonEloRank": 42,
+          "seedNumber": 11,
+          "personalBest": 492835
+        },
+        {
+          "uuid": "5ee577fdc1af45d3a6fb3e086cc293fb",
+          "nickname": "Ranik_",
+          "seasonEloRate": 1760,
+          "seasonEloRank": 39,
+          "seedNumber": 12,
+          "personalBest": 507992
+        },
+        {
+          "uuid": "4129d8d1aafb4e73b97b9999db248060",
+          "nickname": "CroProYT",
+          "seasonEloRate": 1667,
+          "seasonEloRank": 65,
+          "seedNumber": 13,
+          "personalBest": 630845
+        },
+        {
+          "uuid": "3c8757790ab0400b8b9e3936e0dd535b",
+          "nickname": "doogile",
+          "seasonEloRate": 1987,
+          "seasonEloRank": 10,
+          "seedNumber": 14,
+          "personalBest": 440363
+        },
+        {
+          "uuid": "fa61606e8131484c8dee506d1ff9a8dc",
+          "nickname": "AutomattPL",
+          "seasonEloRate": 1644,
+          "seasonEloRank": 77,
+          "seedNumber": 15,
+          "personalBest": 495168
+        }
+      ],
+      "matches": [
+        {
+          "vod": null,
+          "id": 1,
+          "name": "Grand Finals",
+          "nextMatchId": null,
+          "maxRoundScore": 4,
+          "startTime": 1688329800,
+          "state": "DONE",
+          "participants": [
+            {
+              "player": 0,
+              "roundScore": 4
+            },
+            {
+              "player": 14,
+              "roundScore": 3
+            }
+          ]
+        },
+        {
+          "vod": null,
+          "id": 2,
+          "name": "3rd Place",
+          "nextMatchId": null,
+          "maxRoundScore": 3,
+          "startTime": 1688324400,
+          "state": "DONE",
+          "participants": [
+            {
+              "player": 3,
+              "roundScore": 0
+            },
+            {
+              "player": 5,
+              "roundScore": 3
+            }
+          ]
+        },
+        {
+          "vod": null,
+          "id": 3,
+          "name": "Semifinals",
+          "nextMatchId": 1,
+          "maxRoundScore": 3,
+          "startTime": 1688313600,
+          "state": "DONE",
+          "participants": [
+            {
+              "player": 0,
+              "roundScore": 3
+            },
+            {
+              "player": 3,
+              "roundScore": 0
+            }
+          ]
+        },
+        {
+          "vod": null,
+          "id": 4,
+          "name": "Semifinals",
+          "nextMatchId": 1,
+          "maxRoundScore": 3,
+          "startTime": 1688319000,
+          "state": "DONE",
+          "participants": [
+            {
+              "player": 5,
+              "roundScore": 2
+            },
+            {
+              "player": 14,
+              "roundScore": 3
+            }
+          ]
+        },
+        {
+          "vod": null,
+          "id": 5,
+          "name": "Quarterfinals",
+          "nextMatchId": 3,
+          "maxRoundScore": 3,
+          "startTime": 1688236200,
+          "state": "DONE",
+          "participants": [
+            {
+              "player": 0,
+              "roundScore": 3
+            },
+            {
+              "player": 7,
+              "roundScore": 1
+            }
+          ]
+        },
+        {
+          "vod": null,
+          "id": 6,
+          "name": "Quarterfinals",
+          "nextMatchId": 3,
+          "maxRoundScore": 3,
+          "startTime": 1688225400,
+          "state": "DONE",
+          "participants": [
+            {
+              "player": 11,
+              "roundScore": 0
+            },
+            {
+              "player": 3,
+              "roundScore": 3
+            }
+          ]
+        },
+        {
+          "vod": null,
+          "id": 7,
+          "name": "Quarterfinals",
+          "nextMatchId": 4,
+          "maxRoundScore": 3,
+          "startTime": 1688230800,
+          "state": "DONE",
+          "participants": [
+            {
+              "player": 13,
+              "roundScore": 2
+            },
+            {
+              "player": 5,
+              "roundScore": 3
+            }
+          ]
+        },
+        {
+          "vod": null,
+          "id": 8,
+          "name": "Quarterfinals",
+          "nextMatchId": 4,
+          "maxRoundScore": 3,
+          "startTime": 1688241600,
+          "state": "DONE",
+          "participants": [
+            {
+              "player": 9,
+              "roundScore": 2
+            },
+            {
+              "player": 14,
+              "roundScore": 3
+            }
+          ]
+        },
+        {
+          "vod": null,
+          "id": 9,
+          "name": "Round of 16",
+          "nextMatchId": 5,
+          "maxRoundScore": 2,
+          "startTime": 1687723200,
+          "state": "DONE",
+          "participants": [
+            {
+              "player": 0,
+              "roundScore": 2
+            },
+            {
+              "player": 15,
+              "roundScore": 1
+            }
+          ]
+        },
+        {
+          "vod": null,
+          "id": 10,
+          "name": "Round of 16",
+          "nextMatchId": 5,
+          "maxRoundScore": 2,
+          "startTime": 1687716000,
+          "state": "DONE",
+          "participants": [
+            {
+              "player": 7,
+              "roundScore": 2
+            },
+            {
+              "player": 8,
+              "roundScore": 1
+            }
+          ]
+        },
+        {
+          "vod": null,
+          "id": 11,
+          "name": "Round of 16",
+          "nextMatchId": 6,
+          "maxRoundScore": 2,
+          "startTime": 1687705200,
+          "state": "DONE",
+          "participants": [
+            {
+              "player": 4,
+              "roundScore": 0
+            },
+            {
+              "player": 11,
+              "roundScore": 2
+            }
+          ]
+        },
+        {
+          "vod": null,
+          "id": 12,
+          "name": "Round of 16",
+          "nextMatchId": 6,
+          "maxRoundScore": 2,
+          "startTime": 1687719600,
+          "state": "DONE",
+          "participants": [
+            {
+              "player": 3,
+              "roundScore": 2
+            },
+            {
+              "player": 12,
+              "roundScore": 1
+            }
+          ]
+        },
+        {
+          "vod": null,
+          "id": 13,
+          "name": "Round of 16",
+          "nextMatchId": 7,
+          "maxRoundScore": 2,
+          "startTime": 1687701600,
+          "state": "DONE",
+          "participants": [
+            {
+              "player": 2,
+              "roundScore": 0
+            },
+            {
+              "player": 13,
+              "roundScore": 2
+            }
+          ]
+        },
+        {
+          "vod": null,
+          "id": 14,
+          "name": "Round of 16",
+          "nextMatchId": 7,
+          "maxRoundScore": 2,
+          "startTime": 1687726800,
+          "state": "DONE",
+          "participants": [
+            {
+              "player": 5,
+              "roundScore": 2
+            },
+            {
+              "player": 10,
+              "roundScore": 0
+            }
+          ]
+        },
+        {
+          "vod": null,
+          "id": 15,
+          "name": "Round of 16",
+          "nextMatchId": 8,
+          "maxRoundScore": 2,
+          "startTime": 1687712400,
+          "state": "DONE",
+          "participants": [
+            {
+              "player": 6,
+              "roundScore": 1
+            },
+            {
+              "player": 9,
+              "roundScore": 2
+            }
+          ]
+        },
+        {
+          "vod": null,
+          "id": 16,
+          "name": "Round of 16",
+          "nextMatchId": 8,
+          "maxRoundScore": 2,
+          "startTime": 1687708800,
+          "state": "DONE",
+          "participants": [
+            {
+              "player": 1,
+              "roundScore": 1
+            },
+            {
+              "player": 14,
+              "roundScore": 2
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "player": 0,
+          "place": 1,
+          "prize": 1500
+        },
+        {
+          "player": 14,
+          "place": 2,
+          "prize": 750
+        },
+        {
+          "player": 5,
+          "place": 3,
+          "prize": 250
+        },
+        {
+          "player": 3,
+          "place": 4,
+          "prize": 0
+        },
+        {
+          "player": 7,
+          "place": 5,
+          "prize": 0
+        },
+        {
+          "player": 11,
+          "place": 5,
+          "prize": 0
+        },
+        {
+          "player": 13,
+          "place": 5,
+          "prize": 0
+        },
+        {
+          "player": 9,
+          "place": 5,
+          "prize": 0
+        },
+        {
+          "player": 15,
+          "place": 9,
+          "prize": 0
+        },
+        {
+          "player": 8,
+          "place": 9,
+          "prize": 0
+        },
+        {
+          "player": 4,
+          "place": 9,
+          "prize": 0
+        },
+        {
+          "player": 12,
+          "place": 9,
+          "prize": 0
+        },
+        {
+          "player": 2,
+          "place": 9,
+          "prize": 0
+        },
+        {
+          "player": 10,
+          "place": 9,
+          "prize": 0
+        },
+        {
+          "player": 6,
+          "place": 9,
+          "prize": 0
+        },
+        {
+          "player": 1,
+          "place": 9,
+          "prize": 0
+        }
+      ],
+      "season": 1,
+      "type": "alpha"
+    },
+    "next": 2,
+    "prev": null
+  }
+}
