@@ -46,6 +46,89 @@ RAW     = os.path.join(os.path.dirname(__file__), "..", "data", "raw")
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "processed")
 os.makedirs(OUT_DIR, exist_ok=True)
 
+
+# ---------------------------------------------------------------------------
+# NEW FEATURE HELPERS
+# ---------------------------------------------------------------------------
+
+def build_h2h_lookup(df: pd.DataFrame, season_filter: int) -> dict:
+    """
+    Build a head-to-head win-rate lookup from ranked match history.
+
+    Returns {(nick_a, nick_b): nick_a_win_rate} for every ordered pair that
+    appears in matches from seasons 1..season_filter.  Both directions are
+    stored so callers can do a simple lookup without knowing which ordering
+    was used in the raw data.
+    """
+    sub = df[df["season"] <= season_filter][["p1_nick", "p2_nick", "p1_won"]].dropna()
+    wins  = {}
+    total = {}
+    for row in sub.itertuples(index=False):
+        p1, p2, p1_won = row.p1_nick, row.p2_nick, row.p1_won
+        total[(p1, p2)] = total.get((p1, p2), 0) + 1
+        wins[ (p1, p2)] = wins.get( (p1, p2), 0) + int(p1_won)
+        total[(p2, p1)] = total.get((p2, p1), 0) + 1
+        wins[ (p2, p1)] = wins.get( (p2, p1), 0) + int(not p1_won)
+    return {k: wins[k] / total[k] for k in total}
+
+
+def load_lcq_by_season() -> dict:
+    """
+    Parse each season's playoffs JSON and return {season: set_of_lcq_nicks}.
+
+    Players with seedNumber >= 12 occupy the four LCQ spots.  Early seasons
+    that lack a seedNumber field default to an empty set.
+    """
+    lcq = {}
+    for s in range(1, 10):
+        path = os.path.join(RAW, f"season_{s}_playoffs.json")
+        if not os.path.exists(path):
+            lcq[s] = set()
+            continue
+        try:
+            with open(path) as f:
+                data = json.load(f)["data"]["data"]
+            lcq[s] = {
+                p["nickname"]
+                for p in data.get("players", [])
+                if p.get("seedNumber", 0) >= 12
+            }
+        except (KeyError, TypeError, json.JSONDecodeError):
+            lcq[s] = set()
+    return lcq
+
+
+def load_delta_by_season() -> dict:
+    """
+    Parse each season's playoffs JSON and return {season: {nick: delta}}.
+
+    delta = seed_rank - actual_place  (positive = player outperformed seeding).
+    seed_rank is seedNumber + 1 (0-indexed → 1-indexed).
+    """
+    deltas = {}
+    for s in range(1, 10):
+        path = os.path.join(RAW, f"season_{s}_playoffs.json")
+        if not os.path.exists(path):
+            continue
+        try:
+            with open(path) as f:
+                data = json.load(f)["data"]["data"]
+            idx_to_nick = {p["seedNumber"]: p["nickname"]
+                           for p in data.get("players", [])}
+            season_deltas = {}
+            for r in data.get("results", []):
+                idx          = r.get("player")
+                actual_place = r.get("place")
+                nick         = idx_to_nick.get(idx)
+                if nick is None or actual_place is None:
+                    continue
+                seed_rank            = idx + 1          # 0-indexed → 1-indexed
+                season_deltas[nick]  = seed_rank - actual_place
+            deltas[s] = season_deltas
+        except (KeyError, TypeError, json.JSONDecodeError):
+            continue
+    return deltas
+
 # ---------------------------------------------------------------------------
 # Ground-truth playoff results (from scraped JSON + confirmed overrides)
 # ---------------------------------------------------------------------------
@@ -88,6 +171,9 @@ FEATURE_NAMES = [
     "BestTime diff (s)",
     "ForfeitRate diff",
     "EloMomentum diff",
+    "LCQ Flag diff",
+    "Tournament Delta diff",
+    "H2H WinRate",
 ]
 
 # Playoff tier ordering (best → worst)
@@ -146,6 +232,9 @@ def build_player_features(
     playoff_results: dict,
     season_filter: int,
     pedigree_cutoff: int = None,
+    lcq_by_season: dict = None,
+    delta_by_season: dict = None,
+    lcq_season: int = None,
 ) -> pd.DataFrame:
     """
     Compute 11 per-player features using only match data up to `season_filter`.
@@ -237,19 +326,44 @@ def build_player_features(
         )
         deep_run_score = champion_count * 4 + finalist_count * 3 + top4_count * 2 + qf_count
 
+        # LCQ qualifier flag — 1 if this player entered the target playoffs via
+        # the Last-Chance Qualifier, 0 if they qualified directly.
+        # lcq_season overrides season_filter so the S9 test set can use S9 LCQ
+        # data (known before the tournament starts, so not leakage) while still
+        # restricting match stats to S8.
+        _lcq_season = lcq_season if lcq_season is not None else season_filter
+        lcq_flag = 0
+        if lcq_by_season is not None:
+            lcq_flag = 1 if nick in lcq_by_season.get(_lcq_season, set()) else 0
+
+        # Historical tournament performance delta — average of (seed_rank - actual_place)
+        # across all playoff appearances up to pedigree_cutoff.
+        # Positive = player historically outperforms their seeding.
+        avg_delta = np.nan
+        if delta_by_season is not None:
+            past = [
+                delta_by_season[s][nick]
+                for s in range(1, pedigree_cutoff + 1)
+                if s in delta_by_season and nick in delta_by_season[s]
+            ]
+            if past:
+                avg_delta = float(np.mean(past))
+
         records.append({
-            "nickname":       nick,
-            "elo":            last_elo,
-            "win_rate":       win_rate,
-            "recent_wr":      recent_wr,
-            "consistency":    consistency,
-            "avg_time_ms":    avg_time,
-            "best_time_ms":   best_time,
-            "forfeit_rate":   forfeit_rate,
-            "elo_momentum":   elo_momentum,
-            "champion_count": champion_count,
-            "finalist_count": finalist_count,
-            "deep_run_score": deep_run_score,
+            "nickname":              nick,
+            "elo":                   last_elo,
+            "win_rate":              win_rate,
+            "recent_wr":             recent_wr,
+            "consistency":           consistency,
+            "avg_time_ms":           avg_time,
+            "best_time_ms":          best_time,
+            "forfeit_rate":          forfeit_rate,
+            "elo_momentum":          elo_momentum,
+            "champion_count":        champion_count,
+            "finalist_count":        finalist_count,
+            "deep_run_score":        deep_run_score,
+            "lcq_flag":              lcq_flag,
+            "avg_tournament_delta":  avg_delta,
         })
 
     return pd.DataFrame(records)
@@ -263,15 +377,23 @@ PLAYER_FEAT_COLS = [
     "elo", "win_rate", "recent_wr", "consistency", "avg_time_ms",
     "deep_run_score", "champion_count", "finalist_count",
     "best_time_ms", "forfeit_rate", "elo_momentum",
+    "lcq_flag", "avg_tournament_delta",
 ]
 
 
-def build_matchup_vector(feat: pd.DataFrame, p1: str, p2: str) -> np.ndarray:
-    """Return the 11-dim feature diff vector (positive = p1 advantage)."""
+def build_matchup_vector(feat: pd.DataFrame, p1: str, p2: str,
+                         h2h: dict = None) -> np.ndarray:
+    """Return the 14-dim feature diff vector (positive = p1 advantage).
+
+    The three new dimensions (indices 11-13) are:
+      11 — LCQ Flag diff       (1 = p1 is LCQ qualifier, -1 = p2, 0 = same)
+      12 — Tournament Delta diff (p1 avg delta minus p2 avg delta)
+      13 — H2H WinRate          (p1 career win rate vs p2, centered at 0)
+    """
     r1 = feat[feat["nickname"] == p1]
     r2 = feat[feat["nickname"] == p2]
     if r1.empty or r2.empty:
-        return np.full(len(PLAYER_FEAT_COLS), np.nan)
+        return np.full(len(FEATURE_NAMES), np.nan)
 
     r1, r2 = r1.iloc[0], r2.iloc[0]
 
@@ -282,6 +404,21 @@ def build_matchup_vector(feat: pd.DataFrame, p1: str, p2: str) -> np.ndarray:
         avg_time_diff  = (r2["avg_time_ms"]  - r1["avg_time_ms"])  / 1000
     if not (pd.isna(r1["best_time_ms"])) and not (pd.isna(r2["best_time_ms"])):
         best_time_diff = (r2["best_time_ms"] - r1["best_time_ms"]) / 1000
+
+    # LCQ flag diff — direct subtraction (0/1 values, never NaN)
+    lcq_diff = float(r1.get("lcq_flag", 0)) - float(r2.get("lcq_flag", 0))
+
+    # Tournament delta diff — NaN-safe
+    d1 = r1.get("avg_tournament_delta", np.nan)
+    d2 = r2.get("avg_tournament_delta", np.nan)
+    delta_diff = float(d1 - d2) if not (pd.isna(d1) or pd.isna(d2)) else np.nan
+
+    # H2H win rate centered at 0 — positive means p1 has beaten p2 more often
+    h2h_val = 0.0
+    if h2h is not None:
+        wr = h2h.get((p1, p2), None)
+        if wr is not None:
+            h2h_val = wr - 0.5
 
     return np.array([
         r1["elo"]            - r2["elo"],
@@ -295,6 +432,9 @@ def build_matchup_vector(feat: pd.DataFrame, p1: str, p2: str) -> np.ndarray:
         best_time_diff,
         r1["forfeit_rate"]   - r2["forfeit_rate"],
         r1["elo_momentum"]   - r2["elo_momentum"],
+        lcq_diff,
+        delta_diff,
+        h2h_val,
     ], dtype=float)
 
 
@@ -312,11 +452,12 @@ def _expand_tier(tier_val):
 
 
 def build_pairwise_data(
-    feat_lookup: dict,  # season → DataFrame of player features
-    results: dict,      # playoff_results dict
+    feat_lookup: dict,      # season → DataFrame of player features
+    results: dict,          # playoff_results dict
     seasons: list,
     season_weights: dict,
     all_players_set: set = None,
+    h2h_by_season: dict = None,  # season → h2h lookup dict
 ):
     """
     Build cross-tier pairwise (p_better, p_worse) matchup vectors.
@@ -338,6 +479,7 @@ def build_pairwise_data(
         known  = set(feat["nickname"].dropna().values)
         weight = season_weights.get(season, 1)
         res    = results[season]
+        h2h    = h2h_by_season.get(season) if h2h_by_season else None
 
         tiers = [_expand_tier(res.get(t)) for t in TIER_ORDER]
 
@@ -348,7 +490,7 @@ def build_pairwise_data(
                     for p_w in worse_tier:
                         if p_b not in known or p_w not in known:
                             continue
-                        fv = build_matchup_vector(feat, p_b, p_w)
+                        fv = build_matchup_vector(feat, p_b, p_w, h2h=h2h)
                         elo_diff = float(fv[0])
 
                         # p_b (better tier) is the "winner" → y=1
@@ -539,6 +681,19 @@ def main():
     print(f"  {len(df)} unique matches (S1–S9)")
 
     # ------------------------------------------------------------------
+    # Load new feature data (LCQ flags, tournament deltas, H2H lookups)
+    # ------------------------------------------------------------------
+    print("\nLoading LCQ qualifiers and tournament deltas...")
+    lcq_by_season   = load_lcq_by_season()
+    delta_by_season = load_delta_by_season()
+    print(f"  LCQ players per season: { {s: len(v) for s, v in lcq_by_season.items()} }")
+
+    print("Building per-season H2H lookups (no leakage)...")
+    h2h_by_season_train = {s: build_h2h_lookup(df, s) for s in range(1, 9)}
+    h2h_s9_test         = build_h2h_lookup(df, 8)   # S9 test uses only data through S8
+    print("  H2H lookups built for S1–S8 training and S9 test hold-out")
+
+    # ------------------------------------------------------------------
     # Collect all player names that appear in any S1-9 playoff
     # ------------------------------------------------------------------
     all_playoff_players = set()
@@ -563,6 +718,8 @@ def main():
             players=list(all_playoff_players),
             playoff_results=playoff_results,
             season_filter=s,
+            lcq_by_season=lcq_by_season,
+            delta_by_season=delta_by_season,
         )
         n_known = feat_by_season_train[s]["nickname"].notna().sum()
         print(f"  S{s}: {n_known} players with features")
@@ -582,6 +739,9 @@ def main():
         playoff_results=playoff_results,
         season_filter=8,        # NO Season 9 match data → strict hold-out
         pedigree_cutoff=8,      # S8 results ARE known before S9 playoffs
+        lcq_by_season=lcq_by_season,
+        delta_by_season=delta_by_season,
+        lcq_season=9,           # S9 bracket seeding is public before the tournament
     )
     print(f"  S9 test players: {len(feat_s9_test)}")
     print(f"\n  S9 player snapshot (sorted by Elo):")
@@ -604,6 +764,7 @@ def main():
         results=playoff_results,
         seasons=list(range(1, 9)),
         season_weights=SEASON_WEIGHTS,
+        h2h_by_season=h2h_by_season_train,
     )
     print(f"  Training samples : {len(X_train)}")
     print(f"  Class balance    : {y_train.mean():.2f}")
@@ -624,6 +785,7 @@ def main():
         results={9: playoff_results[9]},
         seasons=[9],
         season_weights={9: 1},
+        h2h_by_season={9: h2h_s9_test},
     )
     print(f"  Test samples : {len(X_test)}")
     print(f"  Class balance: {y_test.mean():.2f}")

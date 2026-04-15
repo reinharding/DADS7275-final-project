@@ -372,8 +372,11 @@ def build_player_outcome_data(feat_by_season: dict):
     return np.array(X, dtype=float), np.array(y), names
 
 
-def train_lda(feat_by_season: dict):
-    X, y, names = build_player_outcome_data(feat_by_season)
+def train_lda(feat_by_season: dict, season_filter: int = None):
+    """Train LDA on seasons up to season_filter (all seasons if None)."""
+    filtered = {s: v for s, v in feat_by_season.items()
+                if season_filter is None or s <= season_filter}
+    X, y, names = build_player_outcome_data(filtered)
     if len(X) == 0:
         return None, None, None, None
 
@@ -384,11 +387,12 @@ def train_lda(feat_by_season: dict):
     ])
     pipe.fit(X, y)
 
+    train_label = f"S1–S{season_filter}" if season_filter else "all seasons"
     acc = accuracy_score(y, pipe.predict(X))
-    print(f"\n-- LDA (outcome classification) --")
+    print(f"\n-- LDA (outcome classification, trained on {train_label}) --")
     print(f"  Training samples : {len(X)}")
     print(f"  Classes          : {sorted(set(y))}")
-    print(f"  Training accuracy: {acc:.1%}  (in-sample; limited data)")
+    print(f"  Training accuracy: {acc:.1%}  (in-sample)")
     return pipe, X, y, names
 
 
@@ -525,8 +529,41 @@ def main():
 
     upset_detection_rate(X_test, y_test, y_pred)
 
-    # --- LDA ---
-    lda_pipe, X_lda, y_lda, lda_names = train_lda(feat_by_season)
+    # --- LDA: train on S1–S8 only (strict hold-out) ---
+    lda_pipe, X_lda, y_lda, lda_names = train_lda(feat_by_season, season_filter=8)
+
+    # --- LDA S9 hold-out evaluation ---
+    if lda_pipe is not None:
+        print("\n-- LDA Hold-Out Evaluation (S9) --")
+        s9_res     = PLAYOFF_RESULTS.get(9, {})
+        tier_order = ["champion", "finalist", "top4", "qf_exit", "r1_exit"]
+        feat_s9    = feat_by_season.get(8)   # features built from data through S8
+        if feat_s9 is not None:
+            known = set(feat_s9["nickname"].values)
+            y_true_s9, y_pred_s9 = [], []
+            for tier in tier_order:
+                label = OUTCOME_LABEL[tier]
+                val   = s9_res.get(tier)
+                tier_players = [val] if isinstance(val, str) else (list(val) if val else [])
+                for p in tier_players:
+                    if p not in known:
+                        continue
+                    row = feat_s9[feat_s9["nickname"] == p].iloc[0]
+                    fv  = np.array(
+                        [row[c] if row[c] is not None else np.nan for c in PLAYER_FEAT_COLS],
+                        dtype=float,
+                    ).reshape(1, -1)
+                    y_true_s9.append(label)
+                    y_pred_s9.append(lda_pipe.predict(fv)[0])
+            if y_true_s9:
+                s9_acc = accuracy_score(y_true_s9, y_pred_s9)
+                print(f"  Players evaluated : {len(y_true_s9)}")
+                print(f"  S9 hold-out accuracy : {s9_acc:.1%}")
+                print(classification_report(
+                    y_true_s9, y_pred_s9,
+                    target_names=[OUTCOME_NAME[c] for c in sorted(set(y_true_s9))],
+                    zero_division=0,
+                ))
 
     # --- Season 10 player features ---
     print("\nBuilding Season 10 player features...")
