@@ -61,7 +61,7 @@ PLAYOFF_PLAYERS = {
     1:  ["silverrruns","dandannyboy","Oxidiot","Reignex","priffie","orachi_","lowk3y_","7rowl","doogile","Ancoboyy","pulsar32","Ranik_","MoleyG","CroProYT","AutomattPL","Dylqn"],
     2:  ["lowk3y_","CroProYT","dandannyboy","doogile","7rowl","kW1st","priffie","dwoh","silverrruns","Emillk","bing_pigs","drx6","Ancoboyy","Ranik_","Oxidiot","AutomattPL"],
     3:  ["7rowl","Ancoboyy","dandannyboy","doogile","hackingnoises","lowk3y_","Oxidiot","priffie","ANJOUU","AutomattPL","BeefSalad","Bloonskiller","loodlow","paplerr","v_strid","autoqualler"],
-    4:  ["7rowl","Ancoboyy","dandannyboy","doogile","AutomattPLUS","hackingnoises","Hinart","lowk3y_","Oxidot","paplerr","priffie","silverrruns","ANJOUU","bing_pigs","Cube1337x","v_strid"],
+    4:  ["7rowl","Ancoboyy","dandannyboy","doogile","AutomattPLUS","hackingnoises","Hinart","lowk3y_","Oxidiot","paplerr","priffie","silverrruns","ANJOUU","bing_pigs","Cube1337x","v_strid"],
     5:  ["7rowl","Ancoboyy","BeefSalad","bing_pigs","doogile","AutomattPLUS","hackingnoises","lowk3y_","Oxidiot","silverrruns","TUDORULE","v_strid","Aquacorde","dandannyboy","KenanKardes","pulsar32"],
     6:  ["7rowl","Ayreliaa","BeefSalad","bing_pigs","doogile","AutomattPLUS","Feinberg","hackingnoises","lowk3y_","MrBudgiee","Oxidiot","silverrruns","dandannyboy","Erikfzf","ogurikappa","TUDORULE"],
     7:  ["7rowl","Ancoboyy","Aquacorde","BadGamer","BeefSalad","bing_pigs","doogile","Feinberg","Infume","lowk3y_","priffie","retropog","r7sD4fH6jK0wY5uB","hackingnoises","Oxidiot","silverrruns"],
@@ -124,6 +124,11 @@ def load_matches() -> pd.DataFrame:
 # =============================================================================
 
 def build_player_features(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    One row per (player, season) for every playoff participant.
+    Columns: matches_played, wins, losses, winrate, avg/best finish time,
+    consistency_score (1 - CV of finish time), forfeit_rate, elo_at_season_end.
+    """
     playoff_rows = []
     for season, players in PLAYOFF_PLAYERS.items():
         sdf = df[(df["season"] == season) & (df["is_playoff_player"])]
@@ -150,8 +155,11 @@ def build_player_features(df: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(playoff_rows)
 
 
-# Career aggregates (one row per player across all seasons)
 def build_career_features(features: pd.DataFrame) -> pd.DataFrame:
+    """
+    Collapse player-season rows into one row per player. Used as the
+    feature matrix for KMeans/PCA/t-SNE so each point = one career.
+    """
     agg = features.groupby("nickname").agg(
         seasons_played=("season", "nunique"),
         avg_winrate=("winrate", "mean"),

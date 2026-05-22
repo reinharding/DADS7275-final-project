@@ -191,6 +191,18 @@ def load_all_matches():
 # =============================================================================
 
 def build_player_features(df: pd.DataFrame, players: list, season_filter=None) -> pd.DataFrame:
+    """
+    Compute 11 numeric features per player from match history.
+
+    Features cover four signal types:
+      - Skill        : elo, win_rate, recent_wr (last 20 matches)
+      - Speed        : avg_time_ms, best_time_ms (non-forfeited wins only)
+      - Reliability  : consistency (1/(std_time+1)), forfeit_rate, elo_momentum
+      - Pedigree     : champion_count, finalist_count, top4_count, deep_run_score
+
+    If `season_filter` is given, only matches from seasons <= season_filter
+    are used — this is how we avoid data leakage when evaluating S9 hold-out.
+    """
     if season_filter is not None:
         df = df[df["season"] <= season_filter]
 
@@ -272,6 +284,10 @@ def build_player_features(df: pd.DataFrame, players: list, season_filter=None) -
 # =============================================================================
 
 def build_matchup_features(feat: pd.DataFrame, p1: str, p2: str) -> np.ndarray:
+    """
+    Build an 11-dim "p1 minus p2" diff vector used as the LR input for a head-to-head.
+    Positive value = p1 advantage on that dimension. Order matches MATCHUP_FEAT_NAMES.
+    """
     r1 = feat[feat["nickname"] == p1].iloc[0]
     r2 = feat[feat["nickname"] == p2].iloc[0]
 
@@ -302,6 +318,15 @@ def build_matchup_features(feat: pd.DataFrame, p1: str, p2: str) -> np.ndarray:
 # =============================================================================
 
 def build_training_data(df: pd.DataFrame, feat_by_season: dict):
+    """
+    Build pairwise (X, y, w) training samples from past playoff outcomes.
+
+    For each season's bracket, every player in a higher tier is paired with every
+    player in a lower tier (champion > finalist > top4 > qf_exit > r1_exit).
+    Each pair generates two mirrored samples (p_b vs p_w → y=1, p_w vs p_b → y=0)
+    so the model never sees order bias. Weights come from SEASON_WEIGHTS, which
+    upweight recent seasons (S9 is the most recent and weighted 10x more than S1).
+    """
     X, y, w = [], [], []
     tier_order = ["champion", "finalist", "top4", "qf_exit", "r1_exit"]
 
@@ -341,6 +366,11 @@ def build_training_data(df: pd.DataFrame, feat_by_season: dict):
 # =============================================================================
 
 def build_player_outcome_data(feat_by_season: dict):
+    """
+    Build (X, y, names) for LDA training: each playoff participant becomes one
+    sample, X is their 11-feature vector, y is the outcome class
+    (0=R1 exit ... 4=Champion). Unlike build_training_data, samples are NOT pairwise.
+    """
     X, y, names = [], [], []
     tier_order  = ["champion", "finalist", "top4", "qf_exit", "r1_exit"]
 
@@ -441,6 +471,15 @@ def predict_h2h(pipeline, feat, p1, p2):
 
 
 def simulate_bracket(pipeline, feat, players, n_sims=10000):
+    """
+    Monte Carlo bracket simulation: 16-player single-elimination, Elo-seeded.
+
+    Pairings follow standard tournament seeding: seed 1 vs 16, 2 vs 15, ...
+    Each round, the trained LR pipeline produces a win probability for the
+    matchup, and a Bernoulli draw decides the winner. Running this n_sims
+    times and tallying winners yields the empirical champion / Top-4 rates.
+    Returns: (champion_counts, top4_counts, n_sims).
+    """
     seeds = (feat[feat["nickname"].isin(players)]
              .sort_values("elo", ascending=False)["nickname"].tolist())
     while len(seeds) < 16:
