@@ -21,6 +21,14 @@ The project tries to answer three questions:
 2. **Which features actually drive playoff outcomes?** (Logistic Regression + LDA)
 3. **Who is most likely to win Season 10?** (Monte Carlo simulation of the bracket)
 
+## Tech Stack
+
+- **Languages:** Python 3.10+, SQL, Cypher
+- **ML / data:** pandas, scikit-learn, numpy
+- **Databases:** MySQL (relational) and Neo4j (graph) — same MCSR data modeled in both paradigms
+- **Viz:** matplotlib, seaborn
+- **Notebook:** Jupyter + ipywidgets
+
 ## Methodology
 
 | Step | What | Why |
@@ -31,6 +39,8 @@ The project tries to answer three questions:
 | Supervised | Logistic Regression on pairwise tier comparisons; LDA on individual-player outcome classes | Predict head-to-head winners; classify each player into a likely bracket placement |
 | Validation | Train on Seasons 1–8, hold out Season 9. Recency-weighted training (recent seasons matter more) | Avoid data leakage; test predictive power on truly unseen data |
 | Simulation | 10,000-run Monte Carlo of the S10 bracket using LR win probabilities | Convert per-match probabilities into per-player championship odds |
+| Relational DB | MySQL schema for player profiles, match history, and time records; 10 SQL pattern queries (JOIN, subqueries, aggregations, UNION, EXISTS, ALL) | Demonstrates ability to design and query structured data |
+| Graph DB | Neo4j model treating players, matches, and tournaments as connected nodes; Cypher queries for relationship traversal | Demonstrates alternative data modeling paradigms for the same problem |
 
 ## Selected Results
 
