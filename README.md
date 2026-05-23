@@ -90,6 +90,12 @@ All data comes from the public **[MCSR Ranked API](https://api.mcsrranked.com)**
 No authentication or API key is required. The scraper respects the published
 rate limit (500 requests per 10 minutes).
 
+## Companion SQL work
+
+This repo also contains relational + graph (Neo4j) modeling of the same MCSR
+Ranked data, completed for DADS 6700 — see [sql/](sql/) for the 9-table
+schema, ETL, example queries, and a small charting dashboard.
+
 ## License
 
 [MIT](LICENSE) — feel free to use this code or analysis approach for your own
