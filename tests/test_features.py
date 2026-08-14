@@ -79,6 +79,18 @@ class TestComputeFinishStats:
         )
         assert best == 400_000.0
 
+    def test_zero_variance_gives_maximum_consistency(self):
+        """Identical finish times are perfectly consistent, not unmeasurable.
+
+        The original guard read `if std_time and not np.isnan(std_time)`, which
+        is falsy at exactly std_time == 0.0 — so the best possible value fell
+        through to NaN.
+        """
+        _, _, consistency = features.compute_finish_stats(
+            rows(p1_won=[True, True], win_time_ms=[400_000.0, 400_000.0]), EMPTY
+        )
+        assert consistency == 1.0
+
 
 class TestComputePedigree:
     PED = {

@@ -195,7 +195,8 @@ def compute_finish_stats(as_p1, as_p2):
     avg_time    = float(all_times.mean()) if len(all_times) > 0 else np.nan       # Mean finish time
     best_time   = float(all_times.min())  if len(all_times) > 0 else np.nan       # Fastest win
     std_time    = float(all_times.std())  if len(all_times) > 1 else np.nan       # Variability
-    consistency = 1.0 / (std_time / 1000 + 1) if std_time and not np.isnan(std_time) else np.nan
+    consistency = (1.0 / (std_time / 1000 + 1)
+                   if std_time is not None and not np.isnan(std_time) else np.nan)
     return avg_time, best_time, consistency
 
 
