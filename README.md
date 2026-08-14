@@ -47,7 +47,7 @@ The project tries to answer three questions:
 | Plot | Insight |
 |---|---|
 | ![Player archetypes](data/processed/kmeans_clusters.png) | KMeans finds 4 clear archetypes; S10 pool players (red circles) cluster in the Elite / Veteran regions |
-| ![LR feature importance](data/processed/s10_feature_importance.png) | Elo difference, recent win rate, and tournament pedigree are the strongest predictors of head-to-head outcomes |
+| ![LR feature importance](data/processed/s10_feature_importance.png) | Finish-time consistency, recent win rate, and finalist appearances are the strongest predictors of head-to-head outcomes; Elo and overall pedigree contribute at roughly half that weight |
 | ![Elo vs pedigree](data/processed/s10_elo_vs_pedigree.png) | High Elo does not always equal championship pedigree — separation is informative |
 | ![LDA outcome projection](data/processed/lda_pca_outcomes.png) | LDA cleanly separates champion / finalist / top-4 outcomes in PCA-projected feature space |
 
@@ -81,6 +81,7 @@ notebook reproduces end-to-end without re-running the scraper.
 .
 ├── mcsr_playoff_prediction.ipynb   # Main notebook — full analysis with outputs
 ├── src/
+│   ├── features.py                 # Shared feature engineering (single source of truth)
 │   ├── scraper.py                  # MCSR Ranked API scraper (S1-S9)
 │   ├── explore_api.py              # Quick API smoke-test helper
 │   ├── analysis.py                 # EDA, feature engineering, KMeans/t-SNE/PCA
@@ -89,6 +90,9 @@ notebook reproduces end-to-end without re-running the scraper.
 ├── data/
 │   ├── raw/                        # Per-season JSON + combined CSVs (from scraper)
 │   └── processed/                  # Flat CSVs and all chart PNGs
+├── tests/                          # Unit tests + notebook drift test
+├── scripts/
+│   └── make_baseline.py            # Regenerates the feature fixture
 ├── requirements.txt
 ├── LICENSE                         # MIT
 └── README.md

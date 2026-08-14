@@ -4,7 +4,7 @@ Models: Logistic Regression (H2H), LDA (outcome classification), PCA (feature ex
 Evaluations: accuracy, precision/recall, Top-K accuracy, upset detection rate.
 """
 
-import json, os, time, warnings
+import os, warnings
 import numpy as np
 import pandas as pd
 import requests
@@ -19,9 +19,20 @@ from sklearn.pipeline import Pipeline
 from sklearn.decomposition import PCA
 from sklearn.metrics import accuracy_score, classification_report
 
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from features import (
+    build_player_features,
+    load_all_matches,
+    load_playoff_results,
+    load_lcq_by_season,
+    load_delta_by_season,
+)
+
 warnings.filterwarnings("ignore")
 
-RAW     = os.path.join(os.path.dirname(__file__), "..", "data", "raw")
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "processed")
 API     = "https://api.mcsrranked.com"
 os.makedirs(OUT_DIR, exist_ok=True)
@@ -35,61 +46,6 @@ S10_POOL = [
     "hackingnoises", "steez", "nhb_", "Ancoboyy",
     "lowk3y_",
 ]
-
-# -- Confirmed overrides (used to patch/correct scraped data) --
-# Only entries here will overwrite what the scraper found.
-PLAYOFF_OVERRIDES = {
-    9: {
-        "champion": "hackingnoises",
-        "finalist": "doogile",
-        "top4":     ["Pinne", "Infume"],
-        "qf_exit":  ["steez", "Aquacorde", "lowk3y_", "BlazeMind"],
-        "r1_exit":  ["edcr", "Feinberg", "nhb_", "silverrruns",
-                     "BeefSalad", "nahhann", "HDMICables", "bing_pigs"],
-    },
-}
-
-
-def load_playoff_results() -> dict:
-    """
-    Load playoff results from scraped JSON files (data/raw/all_playoff_results.json).
-    Falls back to PLAYOFF_OVERRIDES for any season not found or missing fields.
-    Applies PLAYOFF_OVERRIDES as a patch on top of scraped data.
-    """
-    scraped_path = os.path.join(RAW, "all_playoff_results.json")
-    results = {}
-
-    if os.path.exists(scraped_path):
-        with open(scraped_path) as f:
-            raw = json.load(f)
-        # JSON keys are strings; convert to int
-        for k, v in raw.items():
-            results[int(k)] = {
-                "champion": v.get("champion"),
-                "finalist": v.get("finalist"),
-                "top4":     v.get("top4", []),
-                "qf_exit":  v.get("qf_exit", []),
-                "r1_exit":  v.get("r1_exit", []),
-            }
-        print(f"Loaded playoff results for seasons: {sorted(results.keys())}")
-    else:
-        print("WARNING: all_playoff_results.json not found. "
-              "Run: python scraper.py playoffs")
-
-    # Apply overrides (patches confirmed data on top of scraped data)
-    for season, override in PLAYOFF_OVERRIDES.items():
-        if season not in results:
-            results[season] = {"champion": None, "finalist": None,
-                               "top4": [], "qf_exit": [], "r1_exit": []}
-        for field, val in override.items():
-            if val is not None and val != [] and val != "":
-                results[season][field] = val
-
-    return results
-
-
-# Populated at runtime by load_playoff_results()
-PLAYOFF_RESULTS: dict = {}
 
 # ---------------------------------------------------------------------------
 # Recency weights — manually tune these to emphasise recent seasons.
@@ -139,135 +95,6 @@ PLAYER_FEAT_COLS = [
 # DATA LOADING
 # =============================================================================
 
-def load_all_matches():
-    frames = []
-    for s in range(1, 10):
-        fpath = os.path.join(RAW, f"season_{s}_matches.json")
-        if not os.path.exists(fpath):
-            continue
-        with open(fpath) as f:
-            matches = json.load(f)
-        for m in matches:
-            players = m.get("players", [])
-            result  = m.get("result") or {}
-            winner_uuid = result.get("uuid")
-            win_time    = result.get("time")
-            forfeited   = m.get("forfeited", False)
-            if len(players) < 2:
-                continue
-            p1, p2 = players[0], players[1]
-            frames.append({
-                "match_id":    m.get("id"),
-                "season":      m.get("season", s),
-                "date":        m.get("date"),
-                "p1_nick":     p1.get("nickname"),
-                "p1_uuid":     p1.get("uuid"),
-                "p1_elo":      p1.get("eloRate"),
-                "p2_nick":     p2.get("nickname"),
-                "p2_uuid":     p2.get("uuid"),
-                "p2_elo":      p2.get("eloRate"),
-                "winner_uuid": winner_uuid,
-                "win_time_ms": win_time,
-                "forfeited":   forfeited,
-            })
-    df = pd.DataFrame(frames).drop_duplicates("match_id")
-    df["p1_won"] = df["winner_uuid"] == df["p1_uuid"]
-    return df
-
-
-# =============================================================================
-# FEATURE ENGINEERING (11 features per player)
-# =============================================================================
-
-def build_player_features(df: pd.DataFrame, players: list, season_filter=None) -> pd.DataFrame:
-    """
-    Compute 11 numeric features per player from match history.
-
-    Features cover four signal types:
-      - Skill        : elo, win_rate, recent_wr (last 20 matches)
-      - Speed        : avg_time_ms, best_time_ms (non-forfeited wins only)
-      - Reliability  : consistency (1/(std_time+1)), forfeit_rate, elo_momentum
-      - Pedigree     : champion_count, finalist_count, top4_count, deep_run_score
-
-    If `season_filter` is given, only matches from seasons <= season_filter
-    are used — this is how we avoid data leakage when evaluating S9 hold-out.
-    """
-    if season_filter is not None:
-        df = df[df["season"] <= season_filter]
-
-    records = {}
-    for nick in players:
-        as_p1 = df[df["p1_nick"] == nick]
-        as_p2 = df[df["p2_nick"] == nick]
-
-        wins   = as_p1["p1_won"].sum() + (~as_p2["p1_won"]).sum()
-        losses = (~as_p1["p1_won"]).sum() + as_p2["p1_won"].sum()
-        total  = wins + losses
-        win_rate = wins / total if total > 0 else 0.5
-
-        # Completion times (non-forfeited wins only)
-        times_p1 = as_p1[as_p1["p1_won"] & ~as_p1["forfeited"]]["win_time_ms"]
-        times_p2 = as_p2[~as_p2["p1_won"] & ~as_p2["forfeited"]]["win_time_ms"]
-        all_times = pd.concat([times_p1, times_p2]).dropna()
-
-        avg_time  = all_times.mean() if len(all_times) > 0 else np.nan
-        best_time = all_times.min()  if len(all_times) > 0 else np.nan
-        std_time  = all_times.std()  if len(all_times) > 1 else np.nan
-        consistency = 1 / (std_time / 1000 + 1) if not (std_time is np.nan or np.isnan(std_time)) else 0.5
-
-        # Recent form (last 20 matches win rate)
-        all_m = pd.concat([
-            as_p1[["date","p1_won"]].rename(columns={"p1_won": "won"}),
-            as_p2[["date","p1_won"]].rename(columns={"p1_won": "won"}).assign(won=lambda x: ~x["won"])
-        ]).sort_values("date").tail(20)
-        recent_wr = all_m["won"].mean() if len(all_m) > 0 else win_rate
-
-        # Forfeit rate
-        total_rows = len(as_p1) + len(as_p2)
-        forfeit_rate = ((as_p1["forfeited"].sum() + as_p2["forfeited"].sum()) / total_rows
-                        if total_rows > 0 else 0.0)
-
-        # Elo momentum (average change over last 20 appearances)
-        elo_ts = pd.concat([
-            as_p1[["date","p1_elo"]].rename(columns={"p1_elo": "elo"}),
-            as_p2[["date","p2_elo"]].rename(columns={"p2_elo": "elo"}),
-        ]).sort_values("date")["elo"].dropna()
-        recent_elo = elo_ts.tail(20)
-        elo_momentum = float((recent_elo.iloc[-1] - recent_elo.iloc[0]) / len(recent_elo)) \
-                       if len(recent_elo) > 1 else 0.0
-
-        # Current Elo (latest appearance)
-        elo_p1 = as_p1.sort_values("date").tail(1)["p1_elo"]
-        elo_p2 = as_p2.sort_values("date").tail(1)["p2_elo"]
-        last_elo = float(elo_p1.values[-1]) if len(elo_p1) else (
-                   float(elo_p2.values[-1]) if len(elo_p2) else 1500)
-
-        # Tournament pedigree (confirmed API data only)
-        champion_count = sum(1 for s in PLAYOFF_RESULTS.values() if s.get("champion") == nick)
-        finalist_count = sum(1 for s in PLAYOFF_RESULTS.values() if s.get("finalist") == nick)
-        top4_count     = sum(1 for s in PLAYOFF_RESULTS.values() if nick in s.get("top4", []))
-        qf_count       = sum(1 for s in PLAYOFF_RESULTS.values() if nick in s.get("qf_exit", []))
-        deep_run_score = champion_count * 4 + finalist_count * 3 + top4_count * 2 + qf_count
-
-        records[nick] = {
-            "nickname":       nick,
-            "elo":            last_elo,
-            "win_rate":       round(win_rate, 4),
-            "total_matches":  int(total),
-            "avg_time_ms":    round(avg_time, 1) if not (avg_time is np.nan or np.isnan(avg_time)) else None,
-            "best_time_ms":   round(best_time, 1) if not (best_time is np.nan or np.isnan(best_time)) else None,
-            "consistency":    round(consistency, 4),
-            "recent_wr":      round(recent_wr, 4),
-            "forfeit_rate":   round(forfeit_rate, 4),
-            "elo_momentum":   round(elo_momentum, 4),
-            "champion_count": champion_count,
-            "finalist_count": finalist_count,
-            "top4_count":     top4_count,
-            "deep_run_score": deep_run_score,
-        }
-    return pd.DataFrame(records.values())
-
-
 # =============================================================================
 # MATCHUP FEATURE VECTOR (11-dimensional diffs)
 # =============================================================================
@@ -282,9 +109,9 @@ def build_matchup_features(feat: pd.DataFrame, p1: str, p2: str) -> np.ndarray:
 
     avg_time_diff  = 0.0
     best_time_diff = 0.0
-    if r1["avg_time_ms"] and r2["avg_time_ms"]:
+    if pd.notna(r1["avg_time_ms"]) and pd.notna(r2["avg_time_ms"]):
         avg_time_diff  = (r2["avg_time_ms"]  - r1["avg_time_ms"])  / 1000
-    if r1["best_time_ms"] and r2["best_time_ms"]:
+    if pd.notna(r1["best_time_ms"]) and pd.notna(r2["best_time_ms"]):
         best_time_diff = (r2["best_time_ms"] - r1["best_time_ms"]) / 1000
 
     return np.array([
@@ -306,7 +133,7 @@ def build_matchup_features(feat: pd.DataFrame, p1: str, p2: str) -> np.ndarray:
 # TRAINING DATA (pairwise tier comparisons)
 # =============================================================================
 
-def build_training_data(df: pd.DataFrame, feat_by_season: dict):
+def build_training_data(df: pd.DataFrame, feat_by_season: dict, playoff_results: dict):
     """
     Build pairwise (X, y, w) training samples from past playoff outcomes.
 
@@ -319,7 +146,7 @@ def build_training_data(df: pd.DataFrame, feat_by_season: dict):
     X, y, w = [], [], []
     tier_order = ["champion", "finalist", "top4", "qf_exit", "r1_exit"]
 
-    for season, results in PLAYOFF_RESULTS.items():
+    for season, results in playoff_results.items():
         if season not in feat_by_season:
             continue
         feat   = feat_by_season[season]
@@ -354,7 +181,7 @@ def build_training_data(df: pd.DataFrame, feat_by_season: dict):
 # LDA: per-player outcome classification
 # =============================================================================
 
-def build_player_outcome_data(feat_by_season: dict):
+def build_player_outcome_data(feat_by_season: dict, playoff_results: dict):
     """
     Build (X, y, names) for LDA training: each playoff participant becomes one
     sample, X is their 11-feature vector, y is the outcome class
@@ -363,7 +190,7 @@ def build_player_outcome_data(feat_by_season: dict):
     X, y, names = [], [], []
     tier_order  = ["champion", "finalist", "top4", "qf_exit", "r1_exit"]
 
-    for season, results in PLAYOFF_RESULTS.items():
+    for season, results in playoff_results.items():
         if season not in feat_by_season:
             continue
         feat  = feat_by_season[season]
@@ -391,11 +218,11 @@ def build_player_outcome_data(feat_by_season: dict):
     return np.array(X, dtype=float), np.array(y), names
 
 
-def train_lda(feat_by_season: dict, season_filter: int = None):
+def train_lda(feat_by_season: dict, playoff_results: dict, season_filter: int = None):
     """Train LDA on seasons up to season_filter (all seasons if None)."""
     filtered = {s: v for s, v in feat_by_season.items()
                 if season_filter is None or s <= season_filter}
-    X, y, names = build_player_outcome_data(filtered)
+    X, y, names = build_player_outcome_data(filtered, playoff_results)
     if len(X) == 0:
         return None, None, None, None
 
@@ -512,27 +339,38 @@ def simulate_bracket(pipeline, feat, players, n_sims=10000):
 # =============================================================================
 
 def main():
-    global PLAYOFF_RESULTS
-    PLAYOFF_RESULTS = load_playoff_results()
+    playoff_results = load_playoff_results()
+    lcq = load_lcq_by_season()
+    deltas = load_delta_by_season()
 
-    # Print what we loaded so you can verify
-    print("\n-- Playoff Results Loaded --")
-    for s in sorted(PLAYOFF_RESULTS):
-        r = PLAYOFF_RESULTS[s]
-        print(f"  S{s}: champion={r['champion']} | finalist={r['finalist']} | "
-              f"top4={r['top4']} | qf={r['qf_exit']}")
-    print()
-
-    print("Loading match data...")
     df = load_all_matches()
-    print(f"  {len(df)} total matches across seasons 1-9\n")
 
-    all_players_hist = list({nick for col in ["p1_nick","p2_nick"] for nick in df[col].dropna()})
-    feat_by_season   = {s: build_player_features(df, all_players_hist, season_filter=s)
-                        for s in range(1, 10)}
+    players = sorted({
+        name
+        for season in playoff_results.values()
+        for value in season.values()
+        for name in ([value] if isinstance(value, str) else value)
+    })
+
+    feat_by_season = {
+        s: build_player_features(df, players, playoff_results, season_filter=s,
+                                 lcq_by_season=lcq, delta_by_season=deltas)
+        for s in range(1, 10)
+    }
+
+    missing = {
+        s: sorted(f[f["elo"].isna()]["nickname"])
+        for s, f in feat_by_season.items()
+    }
+    total_missing = sum(len(v) for v in missing.values())
+    if total_missing:
+        print(f"\nWARNING: {total_missing} player-seasons have no match data:")
+        for s, names in missing.items():
+            if names:
+                print(f"  S{s}: {', '.join(names)}")
 
     print("Building training data...")
-    X, y, w = build_training_data(df, feat_by_season)
+    X, y, w = build_training_data(df, feat_by_season, playoff_results)
     print(f"  {len(X)} matchup samples | class balance: {y.mean():.2f}")
     print(f"  Season weights applied: {SEASON_WEIGHTS}\n")
 
@@ -558,12 +396,12 @@ def main():
     upset_detection_rate(X_test, y_test, y_pred)
 
     # --- LDA: train on S1–S8 only (strict hold-out) ---
-    lda_pipe, X_lda, y_lda, lda_names = train_lda(feat_by_season, season_filter=8)
+    lda_pipe, X_lda, y_lda, lda_names = train_lda(feat_by_season, playoff_results, season_filter=8)
 
     # --- LDA S9 hold-out evaluation ---
     if lda_pipe is not None:
         print("\n-- LDA Hold-Out Evaluation (S9) --")
-        s9_res     = PLAYOFF_RESULTS.get(9, {})
+        s9_res     = playoff_results.get(9, {})
         tier_order = ["champion", "finalist", "top4", "qf_exit", "r1_exit"]
         feat_s9    = feat_by_season.get(8)   # features built from data through S8
         if feat_s9 is not None:
@@ -601,7 +439,8 @@ def main():
     except Exception:
         lb = {}
 
-    feat_s10 = build_player_features(df, S10_POOL)
+    feat_s10 = build_player_features(df, S10_POOL, playoff_results, season_filter=9,
+                                     pedigree_cutoff=9, lcq_by_season=lcq, delta_by_season=deltas)
     for i, row in feat_s10.iterrows():
         if row["nickname"] in lb:
             feat_s10.at[i, "elo"] = lb[row["nickname"]]
