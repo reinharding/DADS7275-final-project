@@ -166,3 +166,65 @@ class TestComputeCurrentElo:
 
     def test_explicit_default_still_honoured(self):
         assert features.compute_current_elo(EMPTY, EMPTY, default=1500.0) == 1500.0
+
+
+class TestPedigreeLeakage:
+    """The defect this whole change exists to prevent.
+
+    src/predict_s10.py filtered match data by season_filter but read pedigree
+    from an unfiltered module global, so the feature row for season s included
+    championships won in seasons s+1..9.
+    """
+
+    def test_pedigree_excludes_the_target_season_by_default(self, df, results):
+        """A player's own win in the season being predicted is never a feature.
+
+        Season 9's champion also won Season 8, so the correct count under the
+        default cutoff is 1, not 0. What must hold is that the Season 9 title
+        itself is absent - proven by comparing against an explicit cutoff that
+        does include it.
+        """
+        champion = results[9]["champion"]
+        through_8 = sum(1 for s, r in results.items()
+                        if s <= 8 and r.get("champion") == champion)
+        through_9 = sum(1 for s, r in results.items()
+                        if s <= 9 and r.get("champion") == champion)
+        assert through_9 == through_8 + 1, "precondition: S9 champion won S9"
+
+        default = features.build_player_features(
+            df, [champion], results, season_filter=9
+        )
+        assert default.iloc[0]["champion_count"] == through_8
+
+        explicit = features.build_player_features(
+            df, [champion], results, season_filter=9, pedigree_cutoff=9
+        )
+        assert explicit.iloc[0]["champion_count"] == through_9
+
+    def test_pedigree_counts_strictly_earlier_seasons(self, df, results):
+        """A season-3 champion is visible from season 4 onward, never before."""
+        champion = results[3]["champion"]
+        before = features.build_player_features(df, [champion], results, season_filter=3)
+        after = features.build_player_features(df, [champion], results, season_filter=4)
+        assert before.iloc[0]["champion_count"] == 0
+        assert after.iloc[0]["champion_count"] >= 1
+
+    def test_explicit_cutoff_overrides_the_default(self, df, results):
+        """The hold-out path passes season_filter explicitly to include it."""
+        champion = results[9]["champion"]
+        feat = features.build_player_features(
+            df, [champion], results, season_filter=9, pedigree_cutoff=9
+        )
+        assert feat.iloc[0]["champion_count"] >= 1
+
+    def test_future_seasons_never_leak(self, df, results):
+        """No season's feature row may reflect any later season's bracket."""
+        champion = results[9]["champion"]
+        for season in range(1, 9):
+            feat = features.build_player_features(
+                df, [champion], results, season_filter=season
+            )
+            counted = feat.iloc[0]["champion_count"]
+            earlier = sum(1 for s, r in results.items()
+                          if s <= season - 1 and r.get("champion") == champion)
+            assert counted == earlier, f"season {season}: {counted} != {earlier}"

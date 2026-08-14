@@ -922,14 +922,29 @@ class TestPedigreeLeakage:
     """
 
     def test_pedigree_excludes_the_target_season_by_default(self, df, results):
-        """Season 9's champion must show champion_count 0 in season 9's row.
+        """A player's own win in the season being predicted is never a feature.
 
-        pedigree_cutoff defaults to season_filter - 1, so a player's own win in
-        the season being predicted cannot appear as one of their features.
+        Season 9's champion also won Season 8, so the correct count under the
+        default cutoff is 1, not 0. What must hold is that the Season 9 title
+        itself is absent — proven by comparing against an explicit cutoff that
+        does include it.
         """
         champion = results[9]["champion"]
-        feat = features.build_player_features(df, [champion], results, season_filter=9)
-        assert feat.iloc[0]["champion_count"] == 0
+        through_8 = sum(1 for s, r in results.items()
+                        if s <= 8 and r.get("champion") == champion)
+        through_9 = sum(1 for s, r in results.items()
+                        if s <= 9 and r.get("champion") == champion)
+        assert through_9 == through_8 + 1, "precondition: S9 champion won S9"
+
+        default = features.build_player_features(
+            df, [champion], results, season_filter=9
+        )
+        assert default.iloc[0]["champion_count"] == through_8
+
+        explicit = features.build_player_features(
+            df, [champion], results, season_filter=9, pedigree_cutoff=9
+        )
+        assert explicit.iloc[0]["champion_count"] == through_9
 
     def test_pedigree_counts_strictly_earlier_seasons(self, df, results):
         """A season-3 champion is visible from season 4 onward, never before."""
