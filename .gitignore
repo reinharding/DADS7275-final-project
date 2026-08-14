@@ -32,3 +32,6 @@ desktop.ini
 # Project-specific
 # (raw data and processed outputs are intentionally committed
 # so the notebook reproduces without re-scraping the API)
+
+# Local-only working files — kept on disk, not published
+docs/superpowers/
