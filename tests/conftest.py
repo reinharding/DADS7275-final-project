@@ -5,6 +5,7 @@ import pytest
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(REPO_ROOT, "src"))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import features  # noqa: E402
 
