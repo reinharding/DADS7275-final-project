@@ -4,17 +4,6 @@ Models: Logistic Regression (H2H), LDA (outcome classification), PCA (feature ex
 Evaluations: accuracy, precision/recall, Top-K accuracy, upset detection rate.
 """
 
-import subprocess, sys, importlib
-if subprocess.run([sys.executable, "-m", "pip", "--version"], capture_output=True).returncode != 0:
-    subprocess.check_call([sys.executable, "-m", "ensurepip", "--upgrade"])
-for pkg in ["pandas", "numpy", "scikit-learn", "requests", "matplotlib"]:
-    try:
-        __import__(pkg.replace("-", "_"))
-    except ImportError:
-        print(f"Installing {pkg}...")
-        subprocess.check_call([sys.executable, "-m", "pip", "install", pkg])
-        importlib.invalidate_caches()
-
 import json, os, time, warnings
 import numpy as np
 import pandas as pd
