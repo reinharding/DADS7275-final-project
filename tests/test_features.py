@@ -143,3 +143,26 @@ class TestComputeRecentForm:
         # 20 losses then 5 wins -> last 20 contains 15 losses and 5 wins
         played = rows(p1_won=[False] * 20 + [True] * 5)
         assert features.compute_recent_form(played, EMPTY, 0.0) == pytest.approx(0.25)
+
+
+class TestComputeCurrentElo:
+    def test_uses_latest_appearance_as_p1(self):
+        assert features.compute_current_elo(
+            rows(p1_elo=[1400.0, 1600.0]), EMPTY
+        ) == 1600.0
+
+    def test_falls_back_to_p2_side(self):
+        assert features.compute_current_elo(EMPTY, rows(p2_elo=[1700.0])) == 1700.0
+
+    def test_no_matches_returns_nan(self):
+        """A player with no matches is missing, not average.
+
+        Returning 1500.0 bypassed the NaN policy every other feature follows:
+        the row entered the model with a plausible Elo and NaN everywhere else,
+        so the imputer never learned it was missing. Season 6's ogurikappa is
+        the known instance.
+        """
+        assert np.isnan(features.compute_current_elo(EMPTY, EMPTY))
+
+    def test_explicit_default_still_honoured(self):
+        assert features.compute_current_elo(EMPTY, EMPTY, default=1500.0) == 1500.0

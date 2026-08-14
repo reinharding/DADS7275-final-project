@@ -210,7 +210,7 @@ def compute_recent_form(as_p1, as_p2, fallback_wr):
 
 
 # Helper: get the player's most recently recorded Elo rating
-def compute_current_elo(as_p1, as_p2, default=1500.0):
+def compute_current_elo(as_p1, as_p2, default=np.nan):
     elo_p1 = as_p1.sort_values('date').tail(1)['p1_elo']   # Most recent Elo as p1
     elo_p2 = as_p2.sort_values('date').tail(1)['p2_elo']   # Most recent Elo as p2
     if len(elo_p1) > 0:
