@@ -5,21 +5,6 @@ computes per-player season features, and prints key insights.
 Models: K-Means clustering, t-SNE visualization, PCA.
 """
 
-import subprocess
-import sys
-import importlib
-
-if subprocess.run([sys.executable, "-m", "pip", "--version"], capture_output=True).returncode != 0:
-    subprocess.check_call([sys.executable, "-m", "ensurepip", "--upgrade"])
-
-for pkg in ["pandas", "numpy", "matplotlib", "seaborn", "scikit-learn"]:
-    try:
-        __import__(pkg.replace("-", "_"))
-    except ImportError:
-        print(f"Installing {pkg}...")
-        subprocess.check_call([sys.executable, "-m", "pip", "install", pkg])
-        importlib.invalidate_caches()
-
 import json
 import os
 import pandas as pd

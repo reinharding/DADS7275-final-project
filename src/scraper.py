@@ -4,31 +4,13 @@ Collects playoff participant data, match history, and Elo stats
 for Seasons 1-9.
 """
 
-import subprocess
-import sys
-import importlib
-
-# Bootstrap pip if missing
-if subprocess.run([sys.executable, "-m", "pip", "--version"], capture_output=True).returncode != 0:
-    subprocess.check_call([sys.executable, "-m", "ensurepip", "--upgrade"])
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "pip"])
-
-def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-    importlib.invalidate_caches()
-
-for pkg in ["requests", "pandas", "numpy", "tqdm"]:
-    try:
-        __import__(pkg)
-    except ImportError:
-        print(f"Installing {pkg}...")
-        install(pkg)
-
-import requests
-import time
 import json
 import os
+import sys
+import time
+
 import pandas as pd
+import requests
 from tqdm import tqdm
 
 BASE_URL = "https://api.mcsrranked.com"
@@ -421,7 +403,6 @@ def run_collection():
 
 
 if __name__ == "__main__":
-    import sys
     if len(sys.argv) > 1 and sys.argv[1] == "playoffs":
         # Run only playoff bracket scraping: python scraper.py playoffs
         collect_playoff_brackets()
