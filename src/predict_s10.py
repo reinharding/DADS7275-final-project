@@ -4,7 +4,7 @@ Models: Logistic Regression (H2H), LDA (outcome classification), PCA (feature ex
 Evaluations: accuracy, precision/recall, Top-K accuracy, upset detection rate.
 """
 
-import json, os, time, warnings
+import os, warnings
 import numpy as np
 import pandas as pd
 import requests
@@ -33,7 +33,6 @@ from features import (
 
 warnings.filterwarnings("ignore")
 
-RAW     = os.path.join(os.path.dirname(__file__), "..", "data", "raw")
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "processed")
 API     = "https://api.mcsrranked.com"
 os.makedirs(OUT_DIR, exist_ok=True)
@@ -47,20 +46,6 @@ S10_POOL = [
     "hackingnoises", "steez", "nhb_", "Ancoboyy",
     "lowk3y_",
 ]
-
-# -- Confirmed overrides (used to patch/correct scraped data) --
-# Only entries here will overwrite what the scraper found.
-PLAYOFF_OVERRIDES = {
-    9: {
-        "champion": "hackingnoises",
-        "finalist": "doogile",
-        "top4":     ["Pinne", "Infume"],
-        "qf_exit":  ["steez", "Aquacorde", "lowk3y_", "BlazeMind"],
-        "r1_exit":  ["edcr", "Feinberg", "nhb_", "silverrruns",
-                     "BeefSalad", "nahhann", "HDMICables", "bing_pigs"],
-    },
-}
-
 
 # ---------------------------------------------------------------------------
 # Recency weights — manually tune these to emphasise recent seasons.

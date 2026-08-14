@@ -217,7 +217,7 @@ def compute_current_elo(as_p1, as_p2, default=np.nan):
         return float(elo_p1.values[-1])   # Use p1 Elo if available
     if len(elo_p2) > 0:
         return float(elo_p2.values[-1])   # Fall back to p2 Elo
-    return default                         # Default to 1500 if no data
+    return default                         # NaN if no data — let the imputer handle it
 
 
 # Helper: compute the slope of the player's recent Elo changes (momentum)
